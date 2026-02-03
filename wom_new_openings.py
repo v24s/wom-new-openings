@@ -14,12 +14,16 @@ import os
 import re
 import sys
 import time
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Dict, Iterable, List, Optional
 
 import urllib.parse
 import urllib.request
 
-OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+OVERPASS_URLS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.nchc.org.tw/api/interpreter",
+]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
 
 AMENITY_PATTERN = re.compile(r"^(restaurant|cafe|fast_food)$", re.IGNORECASE)
@@ -96,9 +100,18 @@ out center tags;
 def fetch_overpass(city: str) -> Dict:
     query = overpass_query(city)
     data = urllib.parse.urlencode({"data": query}).encode("utf-8")
-    req = urllib.request.Request(OVERPASS_URL, data=data, method="POST")
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+
+    last_err = None
+    for url in OVERPASS_URLS:
+        try:
+            req = urllib.request.Request(url, data=data, method="POST")
+            with urllib.request.urlopen(req, timeout=180) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except Exception as err:  # noqa: BLE001
+            last_err = err
+            continue
+
+    raise RuntimeError(f"All Overpass endpoints failed. Last error: {last_err}")
 
 
 def reverse_geocode(lat: float, lon: float, user_agent: str) -> Optional[str]:
