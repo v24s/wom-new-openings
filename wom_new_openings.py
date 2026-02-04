@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Find new restaurant openings for a city using OpenStreetMap (Overpass API)
-with optional reverse geocoding via Nominatim.
+with optional reverse geocoding via Nominatim and Google Places (New).
 
 Outputs CSV with: name, full_address, description, tags, opening_date, source
 """
@@ -25,6 +25,7 @@ OVERPASS_URLS = [
     "https://overpass.nchc.org.tw/api/interpreter",
 ]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
+GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
 
 AMENITY_PATTERN = re.compile(r"^(restaurant|cafe|fast_food)$", re.IGNORECASE)
 
@@ -85,20 +86,31 @@ def parse_opening_date(raw: str) -> Optional[dt.date]:
     return None
 
 
-def overpass_query(city: str) -> str:
+def overpass_query(city: str, cutoff: dt.date, use_newer_proxy: bool) -> str:
+    parts = [
+        'nwr["amenity"~"^(restaurant|cafe|fast_food)$"]["opening_date"](area.searchArea);',
+        'nwr["amenity"~"^(restaurant|cafe|fast_food)$"]["start_date"](area.searchArea);',
+    ]
+    if use_newer_proxy:
+        newer_clause = f'(newer:"{cutoff.isoformat()}T00:00:00Z")'
+        parts.append(
+            f'nwr["amenity"~"^(restaurant|cafe|fast_food)$"]{newer_clause}(area.searchArea);'
+        )
+
+    parts_block = "\n  ".join(parts)
+
     return f"""
 [out:json][timeout:180];
 area["name"="{city}"]["boundary"="administrative"]["admin_level"="8"]->.searchArea;
 (
-  nwr["amenity"~"^(restaurant|cafe|fast_food)$"]["opening_date"](area.searchArea);
-  nwr["amenity"~"^(restaurant|cafe|fast_food)$"]["start_date"](area.searchArea);
+  {parts_block}
 );
 out center tags;
 """
 
 
-def fetch_overpass(city: str) -> Dict:
-    query = overpass_query(city)
+def fetch_overpass(city: str, cutoff: dt.date, use_newer_proxy: bool) -> Dict:
+    query = overpass_query(city, cutoff, use_newer_proxy)
     data = urllib.parse.urlencode({"data": query}).encode("utf-8")
 
     last_err = None
@@ -197,11 +209,53 @@ def format_description(tags: Dict[str, str]) -> Optional[str]:
         if key in tags and tags[key].strip():
             return tags[key].strip()
 
-    # Fallback to concise descriptor from name + cuisine.
+    # Fallback to concise descriptor from cuisine.
     cuisine = tags.get("cuisine")
     if cuisine:
         return f"{cuisine.replace(';', ', ')} cuisine"
     return None
+
+
+def google_places_text_search(
+    query: str,
+    api_key: str,
+    language_code: str = "en",
+    included_type: Optional[str] = None,
+) -> List[Dict]:
+    body = {
+        "textQuery": query,
+        "languageCode": language_code,
+    }
+    if included_type:
+        body["includedType"] = included_type
+        body["strictTypeFiltering"] = True
+
+    headers = {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": api_key,
+        "X-Goog-FieldMask": (
+            "places.displayName,places.formattedAddress,"
+            "places.primaryType,places.types,places.businessStatus"
+        ),
+    }
+
+    req = urllib.request.Request(
+        GOOGLE_PLACES_TEXT_URL,
+        data=json.dumps(body).encode("utf-8"),
+        headers=headers,
+        method="POST",
+    )
+
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        payload = json.loads(resp.read().decode("utf-8"))
+
+    return payload.get("places", [])
+
+
+def normalize_key(name: str, address: str) -> str:
+    key = f"{name}|{address}".strip().lower()
+    key = re.sub(r"\s+", " ", key)
+    return key
 
 
 def main() -> int:
@@ -219,51 +273,130 @@ def main() -> int:
         default=os.environ.get("NOMINATIM_USER_AGENT", "wom-new-openings-script"),
         help="User-Agent for Nominatim requests",
     )
+    parser.add_argument(
+        "--use-newer-proxy",
+        action="store_true",
+        help="Include OSM venues recently edited within the lookback window (lower confidence)",
+    )
+    parser.add_argument(
+        "--google-places",
+        action="store_true",
+        help="Include Google Places candidates (requires GOOGLE_PLACES_API_KEY)",
+    )
     args = parser.parse_args()
 
     today = dt.date.today()
     cutoff = subtract_months(today, args.months)
 
-    payload = fetch_overpass(args.city)
+    payload = fetch_overpass(args.city, cutoff, args.use_newer_proxy)
     rows = []
+    seen = set()
 
     for el in extract_elements(payload):
         tags = el.get("tags", {})
         opening_raw = tags.get("opening_date") or tags.get("start_date")
-        if not opening_raw:
-            continue
 
-        opening_date = parse_opening_date(opening_raw)
-        if not opening_date or opening_date < cutoff:
+        opening_date = parse_opening_date(opening_raw) if opening_raw else None
+
+        # If this is from the newer-proxy path, allow missing opening_date
+        if opening_date is None and not args.use_newer_proxy:
+            continue
+        if opening_date and opening_date < cutoff:
             continue
 
         name = tags.get("name") or ""
-        address = build_address(tags)
+        address = build_address(tags) or ""
 
         if not address and args.reverse_geocode:
             lat = el.get("lat") or el.get("center", {}).get("lat")
             lon = el.get("lon") or el.get("center", {}).get("lon")
             if lat is not None and lon is not None:
                 try:
-                    address = reverse_geocode(lat, lon, args.nominatim_user_agent)
+                    address = reverse_geocode(lat, lon, args.nominatim_user_agent) or ""
                     # Be polite with rate limits.
                     time.sleep(1)
                 except Exception:
-                    address = None
+                    address = ""
 
-        description = format_description(tags)
+        description = format_description(tags) or ""
         tag_list = build_tags(tags)
+
+        confidence = "high" if opening_date else "medium"
+        tag_list.append(f"confidence:{confidence}")
+
+        key = normalize_key(name, address)
+        if key in seen:
+            continue
+        seen.add(key)
 
         rows.append(
             {
                 "name": name,
-                "full_address": address or "",
-                "description": description or "",
-                "tags": ";".join(tag_list),
-                "opening_date": opening_date.isoformat(),
+                "full_address": address,
+                "description": description,
+                "tags": ";".join(sorted(set(tag_list))),
+                "opening_date": opening_date.isoformat() if opening_date else "",
                 "source": "OpenStreetMap",
             }
         )
+
+    if args.google_places:
+        api_key = os.environ.get("GOOGLE_PLACES_API_KEY", "").strip()
+        if not api_key:
+            print(
+                "Warning: GOOGLE_PLACES_API_KEY not set; skipping Google Places.",
+                file=sys.stderr,
+            )
+        else:
+            queries = [
+                f"restaurant in {args.city}, Finland",
+                f"cafe in {args.city}, Finland",
+                f"street food in {args.city}, Finland",
+            ]
+            for q in queries:
+                try:
+                    places = google_places_text_search(
+                        q,
+                        api_key=api_key,
+                        language_code="en",
+                        included_type=None,
+                    )
+                except Exception as err:  # noqa: BLE001
+                    print(f"Google Places error for query '{q}': {err}", file=sys.stderr)
+                    continue
+
+                for place in places:
+                    display = place.get("displayName", {})
+                    name = display.get("text", "") if isinstance(display, dict) else ""
+                    address = place.get("formattedAddress", "")
+
+                    # Simple city filter to keep results in Helsinki
+                    if args.city.lower() not in address.lower():
+                        continue
+
+                    types = place.get("types", []) or []
+                    primary = place.get("primaryType")
+                    tag_list = ["source:google_places", "confidence:low"]
+                    if primary:
+                        tag_list.append(f"type:{primary}")
+                    for t in types:
+                        tag_list.append(f"type:{t}")
+
+                    key = normalize_key(name, address)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+
+                    rows.append(
+                        {
+                            "name": name,
+                            "full_address": address,
+                            "description": "Google Places candidate (no opening_date provided)",
+                            "tags": ";".join(sorted(set(tag_list))),
+                            "opening_date": "",
+                            "source": "Google Places (Text Search)",
+                        }
+                    )
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, "w", newline="", encoding="utf-8") as f:

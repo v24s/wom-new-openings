@@ -11,29 +11,30 @@ Find restaurants opened in the last 6 months in Helsinki, and output a CSV with:
 1. **Use OpenStreetMap (OSM) via Overpass API**
    - OSM exposes structured venue data (amenity, cuisine, address, opening date).
    - Overpass allows queries scoped to a city boundary.
-   - We can filter on `opening_date` or `start_date`, then keep only entries within the last 6 months.
+   - We filter on `opening_date` or `start_date`, then keep only entries within the last 6 months.
 
-2. **Normalize the output**
-   - Build a full address from `addr:*` tags.
+2. **Increase recall with an OSM "recently edited" proxy**
+   - Many venues lack `opening_date` tags, so we optionally include venues edited in the last 6 months.
+   - These are marked as medium confidence, since "recently edited" does not always equal "recently opened."
+
+3. **Add Google Places candidates**
+   - Google Places (Text Search) gives wider discovery, especially for newer venues.
+   - These results do not include opening dates, so they are labeled low confidence and treated as candidates.
+
+4. **Normalize the output**
+   - Build a full address from `addr:*` tags or use optional reverse geocoding.
    - Derive a short description from `description` or `cuisine` tags.
-   - Collect tags such as `amenity`, `cuisine`, `delivery`, `takeaway`, `diet:*`.
-
-3. **Optional reverse geocoding**
-   - If an address is missing, the script can call Nominatim to fill a display address.
-   - This is optional because of rate limits, but makes the output closer to “full address.”
+   - Collect tags such as `amenity`, `cuisine`, `delivery`, `takeaway`, `diet:*`, plus confidence labels.
 
 ## Why this is automated enough for the assignment
 - The script is fully automated with no manual steps besides running it.
-- Data comes from an API, not a hand-curated list.
+- Data comes from APIs, not a hand-curated list.
 - It is easy to schedule (cron or GitHub Actions) for fresh weekly/monthly runs.
 
 ## Limitations and next steps
-- Not all venues in OSM have `opening_date` tags; results may be incomplete.
-- To improve recall, I would add additional providers:
-  - Google Places API (if a key is available)
-  - Yelp Fusion API (if available)
-  - Local food/restaurant listings with RSS or structured HTML
-- Then deduplicate results by name + address and rank by confidence.
+- OSM opening dates are incomplete; proxy results are heuristic.
+- Google Places requires an API key and billing.
+- Next step: add another source (e.g., Yelp) and deduplicate/rank results by confidence.
 
 ## Deliverables
 - Script: `wom_new_openings.py`
