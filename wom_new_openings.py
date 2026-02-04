@@ -225,6 +225,7 @@ def google_places_text_search(
     body = {
         "textQuery": query,
         "languageCode": language_code,
+        "pageSize": 20,
     }
     if included_type:
         body["includedType"] = included_type
