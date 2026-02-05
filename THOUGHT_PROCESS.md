@@ -19,6 +19,7 @@ Find restaurants opened in the last 6 months in Helsinki, and output a CSV with:
 
 3. **Add Google Places candidates**
    - Google Places (Text Search) gives wider discovery, especially for newer venues.
+   - A location bias around Helsinki and broader query set improves recall.
    - These results do not include opening dates, so they are labeled low confidence and treated as candidates.
 
 4. **Normalize the output**

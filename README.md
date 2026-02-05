@@ -47,3 +47,4 @@ CSV columns:
 - OSM `opening_date` results are **high confidence**.
 - OSM `newer` proxy results are **medium confidence** (recently edited, not guaranteed to be new openings).
 - Google Places results are **low confidence** (candidates without opening dates) but expand coverage.
+- Google Places uses a location bias around Helsinki and a wider set of queries to increase recall.

@@ -9,6 +9,7 @@ Outputs CSV with: name, full_address, description, tags, opening_date, source
 import argparse
 import csv
 import datetime as dt
+import math
 import json
 import os
 import re
@@ -26,6 +27,8 @@ OVERPASS_URLS = [
 ]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
 GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
+HELSINKI_CENTER = (60.1699, 24.9384)
+HELSINKI_RADIUS_KM = 30
 
 AMENITY_PATTERN = re.compile(r"^(restaurant|cafe|fast_food)$", re.IGNORECASE)
 
@@ -221,6 +224,7 @@ def google_places_text_search(
     api_key: str,
     language_code: str = "en",
     included_type: Optional[str] = None,
+    location_bias: Optional[Dict] = None,
 ) -> List[Dict]:
     body = {
         "textQuery": query,
@@ -230,13 +234,15 @@ def google_places_text_search(
     if included_type:
         body["includedType"] = included_type
         body["strictTypeFiltering"] = True
+    if location_bias:
+        body["locationBias"] = location_bias
 
     headers = {
         "Content-Type": "application/json",
         "X-Goog-Api-Key": api_key,
         "X-Goog-FieldMask": (
             "places.displayName,places.formattedAddress,"
-            "places.primaryType,places.types,places.businessStatus"
+            "places.primaryType,places.types,places.businessStatus,places.location"
         ),
     }
 
@@ -257,6 +263,18 @@ def normalize_key(name: str, address: str) -> str:
     key = f"{name}|{address}".strip().lower()
     key = re.sub(r"\s+", " ", key)
     return key
+
+
+def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    # Radius of Earth in km
+    r = 6371.0
+    phi1 = math.radians(lat1)
+    phi2 = math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return r * c
 
 
 def main() -> int:
@@ -350,10 +368,22 @@ def main() -> int:
             )
         else:
             queries = [
-                f"restaurant in {args.city}, Finland",
-                f"cafe in {args.city}, Finland",
-                f"street food in {args.city}, Finland",
+                f"restaurant in {args.city}",
+                f"cafe in {args.city}",
+                f"street food in {args.city}",
+                f"new restaurant in {args.city}",
+                f"bistro in {args.city}",
+                f"food stall in {args.city}",
+                f"food court in {args.city}",
             ]
+            location_bias = None
+            if args.city.lower() == "helsinki":
+                location_bias = {
+                    "circle": {
+                        "center": {"latitude": HELSINKI_CENTER[0], "longitude": HELSINKI_CENTER[1]},
+                        "radius": HELSINKI_RADIUS_KM * 1000,
+                    }
+                }
             for q in queries:
                 try:
                     places = google_places_text_search(
@@ -361,6 +391,7 @@ def main() -> int:
                         api_key=api_key,
                         language_code="en",
                         included_type=None,
+                        location_bias=location_bias,
                     )
                 except Exception as err:  # noqa: BLE001
                     print(f"Google Places error for query '{q}': {err}", file=sys.stderr)
@@ -371,8 +402,19 @@ def main() -> int:
                     name = display.get("text", "") if isinstance(display, dict) else ""
                     address = place.get("formattedAddress", "")
 
-                    # Simple city filter to keep results in Helsinki
-                    if args.city.lower() not in address.lower():
+                    keep = False
+                    if address and args.city.lower() in address.lower():
+                        keep = True
+
+                    location = place.get("location") or {}
+                    lat = location.get("latitude")
+                    lon = location.get("longitude")
+                    if lat is not None and lon is not None and args.city.lower() == "helsinki":
+                        distance = haversine_km(lat, lon, HELSINKI_CENTER[0], HELSINKI_CENTER[1])
+                        if distance <= HELSINKI_RADIUS_KM:
+                            keep = True
+
+                    if not keep:
                         continue
 
                     types = place.get("types", []) or []
