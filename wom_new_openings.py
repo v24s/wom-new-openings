@@ -286,7 +286,7 @@ def google_places_text_search(
         "Content-Type": "application/json",
         "X-Goog-Api-Key": api_key,
         "X-Goog-FieldMask": (
-            "places.displayName,places.formattedAddress,"
+            "places.id,places.displayName,places.formattedAddress,"
             "places.primaryType,places.types,places.businessStatus,places.location"
         ),
     }
@@ -302,6 +302,21 @@ def google_places_text_search(
         payload = json.loads(resp.read().decode("utf-8"))
 
     return payload.get("places", [])
+
+
+def google_place_details(place_id: str, api_key: str, field_mask: str) -> Dict:
+    headers = {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": api_key,
+        "X-Goog-FieldMask": field_mask,
+    }
+    req = urllib.request.Request(
+        f"https://places.googleapis.com/v1/places/{place_id}",
+        headers=headers,
+        method="GET",
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
 
 def normalize_key(name: str, address: str) -> str:
@@ -584,6 +599,17 @@ def main() -> int:
         help="Include Google Places candidates (requires GOOGLE_PLACES_API_KEY)",
     )
     parser.add_argument(
+        "--google-details",
+        action="store_true",
+        help="Enrich Google Places candidates with Place Details (more API calls/cost)",
+    )
+    parser.add_argument(
+        "--google-details-limit",
+        type=int,
+        default=100,
+        help="Max number of Google Place Details requests (default: 100)",
+    )
+    parser.add_argument(
         "--prh-bis",
         action="store_true",
         help="Include PRH BIS companies registered in the lookback window (registration date as opening date)",
@@ -729,6 +755,15 @@ def main() -> int:
                 google_allowed_types = {"restaurant"}
                 google_excluded_types.update({"cafe", "fast_food"})
 
+            details_fields = (
+                "displayName,formattedAddress,primaryType,types,rating,userRatingCount,"
+                "priceLevel,takeout,delivery,dineIn,reservable,outdoorSeating,"
+                "servesVegetarianFood,servesBeer,servesWine,servesCocktails,"
+                "servesCoffee,servesBreakfast,servesLunch,servesDinner,servesDessert,"
+                "regularOpeningHours"
+            )
+            details_calls = 0
+
             queries = [
                 f"restaurant in {args.city}",
                 f"cafe in {args.city}",
@@ -789,11 +824,57 @@ def main() -> int:
                     if not keep:
                         continue
 
+                    details = {}
+                    if args.google_details and details_calls < args.google_details_limit:
+                        place_id = place.get("id")
+                        if place_id:
+                            try:
+                                details = google_place_details(
+                                    place_id=place_id,
+                                    api_key=api_key,
+                                    field_mask=details_fields,
+                                )
+                                details_calls += 1
+                            except Exception:
+                                details = {}
+
                     tag_list = ["source:google_places", "confidence:low"]
                     if primary:
                         tag_list.append(f"type:{primary}")
                     for t in types:
                         tag_list.append(f"type:{t}")
+
+                    if details:
+                        rating = details.get("rating")
+                        if rating is not None:
+                            tag_list.append(f"rating:{rating}")
+                        rating_count = details.get("userRatingCount")
+                        if rating_count is not None:
+                            tag_list.append(f"ratings:{rating_count}")
+                        price_level = details.get("priceLevel")
+                        if price_level:
+                            tag_list.append(f"price_level:{price_level}")
+
+                        for field in [
+                            "takeout",
+                            "delivery",
+                            "dineIn",
+                            "reservable",
+                            "outdoorSeating",
+                            "servesVegetarianFood",
+                            "servesBeer",
+                            "servesWine",
+                            "servesCocktails",
+                            "servesCoffee",
+                            "servesBreakfast",
+                            "servesLunch",
+                            "servesDinner",
+                            "servesDessert",
+                        ]:
+                            if details.get(field) is True:
+                                tag_list.append(f"{field}:yes")
+                            elif details.get(field) is False:
+                                tag_list.append(f"{field}:no")
 
                     key = normalize_key(name, address)
                     if key in seen:

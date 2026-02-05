@@ -34,6 +34,19 @@ export GOOGLE_PLACES_API_KEY="your_key_here"
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --output data/helsinki_openings.csv
 ```
 
+OSM + Google Places + Place Details (richer tags, higher cost):
+
+```bash
+export GOOGLE_PLACES_API_KEY="your_key_here"
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --google-details --output data/helsinki_openings.csv
+```
+
+Limit Place Details calls (reduce cost):
+
+```bash
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --google-details --google-details-limit 50 --output data/helsinki_openings.csv
+```
+
 OSM + Google Places, restaurant-only:
 
 ```bash
