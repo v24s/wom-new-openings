@@ -629,6 +629,15 @@ def main() -> int:
             continue
         seen.add(key)
 
+        last_edit = el.get("timestamp", "")
+        last_edit_age_days = ""
+        if last_edit:
+            try:
+                last_dt = dt.datetime.fromisoformat(last_edit.replace("Z", "+00:00"))
+                last_edit_age_days = str((dt.datetime.now(dt.timezone.utc) - last_dt).days)
+            except Exception:
+                last_edit_age_days = ""
+
         rows.append(
             {
                 "name": name,
@@ -637,6 +646,7 @@ def main() -> int:
                 "tags": ";".join(sorted(set(tag_list))),
                 "opening_date": opening_date.isoformat() if opening_date else "",
                 "osm_last_edit": el.get("timestamp", ""),
+                "osm_last_edit_age_days": last_edit_age_days,
                 "source": "OpenStreetMap",
             }
         )
@@ -741,6 +751,7 @@ def main() -> int:
                             "tags": ";".join(sorted(set(tag_list))),
                             "opening_date": "",
                             "osm_last_edit": "",
+                            "osm_last_edit_age_days": "",
                             "source": "Google Places (Text Search)",
                         }
                     )
@@ -822,6 +833,7 @@ def main() -> int:
                     "tags": ";".join(sorted(set(tag_list))),
                     "opening_date": registration_date,
                     "osm_last_edit": "",
+                    "osm_last_edit_age_days": "",
                     "source": "PRH BIS (registration date)",
                 }
             )
@@ -837,6 +849,7 @@ def main() -> int:
                 "tags",
                 "opening_date",
                 "osm_last_edit",
+                "osm_last_edit_age_days",
                 "source",
             ],
         )

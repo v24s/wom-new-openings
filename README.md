@@ -81,6 +81,7 @@ CSV columns:
 - `tags`
 - `opening_date`
 - `osm_last_edit`
+- `osm_last_edit_age_days`
 - `source`
 
 ## Notes
