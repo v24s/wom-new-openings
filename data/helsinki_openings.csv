@@ -5,46 +5,26 @@ Maya Bar & Grill,"Mikonkatu 18, 00100 Helsinki",,confidence:medium;diet:halal:no
 Kabuki,"Lapinlahdenkatu 12, 00180 Helsinki, FI",japanese cuisine,confidence:medium;cuisine:japanese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Ateljé Finne,"Arkadiankatu 14, 00100 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Lentävä Lautanen,"Malmin lentoaseman aukio 6, 00700 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Subway,"Vuotie 45, 00980 Helsinki, FI",sandwich cuisine,confidence:medium;cuisine:sandwich;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
 Ravintola Fregatti,"Vuotie 45, 00980 Helsinki, FI",,confidence:medium;diet:vegan:no;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
-Kotipizza,"Vuotie 45, 00980 Helsinki, FI",pizza cuisine,confidence:medium;cuisine:pizza;delivery:yes;diet:vegan:yes;diet:vegetarian:yes;fast_food;takeaway:yes,,OpenStreetMap
 Rauhankahvila Fredrika,"Veturitori 3, 00520 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Unicafe,"Koetilantie 7, 00790 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Unicafe,"Viikinkaari 9, 00790 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
-Pizza Service Itäkeskus,"Kauppakartanonkatu 5, 00930 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;fast_food,,OpenStreetMap
-King Kebab,"Mäkelänkatu 31, 00550 Helsinki","kebab, pizza, falafel cuisine",confidence:medium;cuisine:falafel;cuisine:kebab;cuisine:pizza;diet:halal:no;diet:kosher:no;fast_food;outdoor_seating:no,,OpenStreetMap
 Ravintola Sophie,"Koskelantie 9, 00610 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 St1 HelmiSimpukka Helsinki Pukinmäki,"Ratavallintie 1, 00720 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
 Puksu Room,"Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:no;outdoor_seating:yes;restaurant,,OpenStreetMap
 Factory - Vallila,,,confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:no;restaurant;takeaway:yes,,OpenStreetMap
-Pizzeria Online,"Pitäjänmäentie 19, 00370 Helsinki","pizza, kebab, burger, schnitzel, pasta, chicken, salad cuisine",confidence:medium;cuisine:burger;cuisine:chicken;cuisine:kebab;cuisine:pasta;cuisine:pizza;cuisine:salad;cuisine:schnitzel;delivery:yes;diet:halal:no;diet:kosher:no;fast_food;takeaway:yes,,OpenStreetMap
-Gran Delicato,"Helsinki, FI","international, sandwich, greek cuisine",cafe;confidence:medium;cuisine:greek;cuisine:international;cuisine:sandwich;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:no,,OpenStreetMap
-Savalan Pizza & Kebab,"Roihuvuorentie 28, 00820 Helsinki, FI",,confidence:medium;fast_food;outdoor_seating:yes,,OpenStreetMap
 Ravintola Lafal,"Hämeentie 6, 00530 Helsinki, FI",lebanese cuisine,confidence:medium;cuisine:lebanese;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant;takeaway:yes,,OpenStreetMap
 Pizzeria Parmesan,,pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Mei Lin,"Annankatu 29, 00100 Helsinki, FI",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 White Lady,,,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Kahvio Teboil Itäväylä,"Linnavuorentie 30, 00950 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
 Hard Rock Cafe,"Aleksanterinkatu 21, 00100 Helsinki, FI",american cuisine,confidence:medium;cuisine:american;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Unicafe,"Mannerheimintie 3 B, 00100 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
 Chef Huang,"Näyttelijäntie 14, 00400 Helsinki",chinese cuisine,confidence:medium;cuisine:chinese;delivery:no;diet:halal:no;diet:kosher:no;restaurant;takeaway:yes,,OpenStreetMap
-Kannelmäen Pizzapalvelu,"Sitratori 3, 00420 Helsinki","pizza, kebab, stake, salad, chicken, fish, pasta, falafel, burger cuisine",confidence:medium;cuisine:burger;cuisine:chicken;cuisine:falafel;cuisine:fish;cuisine:kebab;cuisine:pasta;cuisine:pizza;cuisine:salad;cuisine:stake;delivery:yes;fast_food;takeaway:yes,,OpenStreetMap
 Ravintola Sylvi,"Käpylänkuja 1, 00610 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Factory,"Esterinportti 2, 00240 Helsinki, FI",,confidence:medium;restaurant,,OpenStreetMap
-Käpylän Pizza & Kebab Palvelu,"Käpyläntie 8, 00600 Helsinki","pizza, kebab cuisine",confidence:medium;cuisine:kebab;cuisine:pizza;diet:halal:no;diet:kosher:no;fast_food;outdoor_seating:yes,,OpenStreetMap
-Kotipizza,"Siltavoudintie 9, 00640 Helsinki, FI",pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
 Oulunkylän Kebab-Pizzeria,,,confidence:medium;restaurant,,OpenStreetMap
-Hesburger,"Kaivokatu, 00100 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Hesburger,"Mannerheimintie 19, 00250 Helsinki, FI",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;takeaway:yes,,OpenStreetMap
-Hesburger,"Vuotie 45, 00980 Helsinki, FI",burger cuisine,confidence:medium;cuisine:burger;diet:vegan:yes;diet:vegetarian:yes;fast_food;takeaway:yes,,OpenStreetMap
-Hesburger,"Messuaukio 1, 00520 Helsinki, FI",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Hesburger,"Itäkatu 7, 00930 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;takeaway:yes,,OpenStreetMap
-Töölön Pizzapalvelu,,pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;fast_food;outdoor_seating:yes,,OpenStreetMap
-Café Engel,"Aleksanterinkatu 26, 00170 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
-Fazer Café,"Raumantie 1, 00350 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
 Block by Dylan,"Eteläranta 18, 00130 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
 Dragon Phoenix,"Pohjoinen Makasiinikatu 1, 00130 Helsinki, FI",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Joe & The Juice,"Helsinki, FI",coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;takeaway:yes,,OpenStreetMap
 Singapore,"Lapinlahdenkatu 29, 00180 Helsinki, FI",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Tacoya,"Lapinlahdenkatu 25, 00180 Helsinki, FI",mexican cuisine,confidence:medium;cuisine:mexican;restaurant,,OpenStreetMap
 Yarsa,"Kajaaninkatu 2, 00510 Helsinki, FI",nepalese cuisine,confidence:medium;cuisine:nepalese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
@@ -53,37 +33,29 @@ Chill & Grill,"Porvoonkatu 23, 00510 Helsinki, FI",steak_house cuisine,confidenc
 The Old Skiffer,"Laivurinkatu 10, 00150 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
 Ravintola Savoy,"Eteläesplanadi 14, 00130 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Pizzeria Nikolai,"00190 Helsinki, FI",pizza cuisine,confidence:medium;cuisine:pizza;outdoor_seating:yes;restaurant,,OpenStreetMap
-Antin Kaffeliiteri,,,cafe;confidence:medium;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes,,OpenStreetMap
 Hua Fu Jiu Lou,"Helsinki, FI",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Ravintola Onda,"Porthaninkatu 4, 00530 Helsinki, FI",Lounasbuffet arkisin klo 11:00 - 15:00,confidence:medium;cuisine:buffet;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
 Pizzeria Via Tribunali,"Sofiankatu 4, 00170 Helsinki, FI","pizza, italian cuisine",confidence:medium;cuisine:italian;cuisine:pizza;diet:gluten_free:no;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Burgers & Wine,"Jaalaranta 5, 00180 Helsinki",burger cuisine,confidence:medium;cuisine:burger;outdoor_seating:yes;restaurant,,OpenStreetMap
 Osteria dei Mancini,"Tehtaankatu 38, Helsinki, FI",italian cuisine,confidence:medium;cuisine:italian;restaurant,,OpenStreetMap
 Kellotorni,"Kaivokatu 1, 00100 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Picnic,Kasarmikatu 42,,cafe;confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
-Robert’s Coffee Jugend,"Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
 Ravintola Teatteri,"Pohjoisesplanadi 2, 00130 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Manhattan Steak House,"Eteläesplanadi, 00100 Helsinki, FI",steak_house cuisine,confidence:medium;cuisine:house;cuisine:steak;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Ravintola Bronda,"Eteläesplanadi 20, 00130 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:no;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
 Salutorget,,regional cuisine,confidence:medium;cuisine:regional;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Konnichiwa,"Fredrikinkatu 56, 00100 Helsinki, FI",sushi cuisine,confidence:medium;cuisine:sushi;diet:halal:no;diet:kosher:no;outdoor_seating:no;restaurant,,OpenStreetMap
 Fuji Biyori,"Korkeavuorenkatu 47, 00130 Helsinki, FI","japanese, sushi cuisine",confidence:medium;cuisine:japanese;cuisine:sushi;outdoor_seating:no;restaurant,,OpenStreetMap
-Café Strindberg,"Pohjoisesplanadi 33, 00130 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
-Karl Fazer Café,"Kluuvikatu 3, 00100 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
 Bambu Sushi Konepaja,"Aleksis Kiven katu 58, 00510 Helsinki, FI",sushi cuisine,confidence:medium;cuisine:sushi;restaurant,,OpenStreetMap
 Toveri,"Castréninkatu 3, 00530 Helsinki, FI",,confidence:medium;restaurant,,OpenStreetMap
 Ravintola Pastis,"Pieni Roobertinkatu 2, 00130 Helsinki, FI",french cuisine,confidence:medium;cuisine:french;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
-Puotilan pizza & kebab,"Klaavuntie 11, 00910 Helsinki",kebab cuisine,confidence:medium;cuisine:kebab;diet:halal:no;diet:kosher:no;fast_food,,OpenStreetMap
 Alfons Pizza,"Vuorimiehenkatu 35, 00150 Helsinki, FI",pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant;takeaway:yes,,OpenStreetMap
 Aperitivo by Alfons,"Vuorimiehenkatu 18, 00150 Helsinki, FI",,confidence:medium;outdoor_seating:yes;restaurant,,OpenStreetMap
 Akhanda Food And Bar,"Maistraatinportti 4, 00240 Helsinki, FI",Nepalese restaurant,confidence:medium;cuisine:nepalese;diet:chicken:yes;diet:fish:yes;diet:lactose_free:yes;diet:vegetarian:yes;restaurant;takeaway:yes,,OpenStreetMap
 Pasila Ravintola Kuningas,"Asemapäällikönkatu 3, 00520 Helsinki, FI","pizza, kebab cuisine",confidence:medium;cuisine:kebab;cuisine:pizza;delivery:no;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
-Boneless,,"burger, chicken, wings cuisine",confidence:medium;cuisine:burger;cuisine:chicken;cuisine:wings;fast_food,,OpenStreetMap
 Unicafe,"A.I. Virtasen aukio 1, 00560 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Food Chef,"Rapakivenkuja 9, 00710 Helsinki","lunch, pizza cuisine",confidence:medium;cuisine:lunch;cuisine:pizza;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes;restaurant;takeaway:yes,,OpenStreetMap
 Southland,"Meri-Rastilan tie 3, 00980 Helsinki",chinese cuisine,confidence:medium;cuisine:chinese;delivery:no;diet:halal:no;diet:kosher:no;restaurant;takeaway:yes,,OpenStreetMap
 Itsudemo,"Salomonkatu 3, 00100 Helsinki, FI",sushi cuisine,confidence:medium;cuisine:sushi;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Hot Chick,Kustaankatu 7,"chicken, sandwich cuisine",confidence:medium;cuisine:chicken;cuisine:sandwich;fast_food,,OpenStreetMap
 Satama Bar & Bistro,"Hitsaajankatu 22, 00810 Helsinki",mediterranean cuisine,confidence:medium;cuisine:mediterranean;restaurant,,OpenStreetMap
 Sotto Pizzeria,Laajalahdentie 17,pizza cuisine,confidence:medium;cuisine:pizza;restaurant,,OpenStreetMap
 Twenty four social club,"Kolmas linja 6, 00530 Helsinki, FI",fusion cuisine,confidence:medium;cuisine:fusion;restaurant,,OpenStreetMap
@@ -95,29 +67,18 @@ Unicafe,"Fabianinkatu 39, 00100 Helsinki",,confidence:medium;diet:halal:no;diet:
 Unicafe,,,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Unicafe,"Pietari Kalmin katu 5, 00560 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Soitin,,,confidence:medium;restaurant,,OpenStreetMap
-Meilahden Kartanon Kahvila,"Tamminiementie 8, 00250 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
 Onnekas Kissa,"Teollisuuskatu 21, 00510 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Kahvila Pikku Karhu,"Karhusaarentie 34, 00890 Helsinki",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Birdie Numnum,"Hämeentie 2, 00530 Helsinki, FI",,confidence:medium;restaurant,,OpenStreetMap
 Indie Bistro & Bar,"Postikuja 2, 00100 Helsinki, FI",indian cuisine,confidence:medium;cuisine:indian;outdoor_seating:yes;restaurant,,OpenStreetMap
 Unicafe,"Viikinkaari 11, 00790 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
-Coffee House,"Asema-aukio 2, 00100 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:limited,,OpenStreetMap
 Taulu,"Rautatieasema, Kaivokatu 1, 00100 Helsinki, FI",,confidence:medium;restaurant,,OpenStreetMap
-Friends & Brgrs Helsinki,"Mikonkatu 8, 00100 Helsinki, FI",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no,,OpenStreetMap
 Zetor,"Mannerheimintie 3, 00100 Helsinki, FI",regional cuisine,confidence:medium;cuisine:regional;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Ravintola Saari,00150 Helsinki,,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Uunisaari,"Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
 Vapiano,"Mikonkatu, 00100 Helsinki, FI",italian cuisine,confidence:medium;cuisine:italian;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
 Domo,"Kalevankatu 21, 00100 Helsinki, FI",japanese cuisine,confidence:medium;cuisine:japanese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Konditoria Briossi,"Kalevankatu 9, 00100 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
-Café Berry,"Annankatu 27, 00100 Helsinki, FI",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Swad Nepal,"Lapinlahdenkatu 17, 00180 Helsinki, FI",nepalese cuisine,confidence:medium;cuisine:nepalese;restaurant,,OpenStreetMap
 Tandoor,Salomonkatu 19,indian cuisine,confidence:medium;cuisine:indian;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes;restaurant;takeaway:yes,,OpenStreetMap
-McDonald's,"Fredrikinkatu 48, 00100 Helsinki, FI",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
 Ravintola Penélope,"Mikonkatu 9, 00100 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Kahvila Palomaja,"Pakilantie 124, 00670 Helsinki",,cafe;confidence:medium;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
-Unicafe,"Gustaf Hällströmin katu 2, 00560 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes,,OpenStreetMap
-Hesburger,"Vuotie 4, 00980 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;fast_food;takeaway:yes,,OpenStreetMap
 Cortana express,"Meri-Rastilan kuja 2, 00980 Helsinki",pizza cuisine,confidence:medium;cuisine:pizza;restaurant,,OpenStreetMap
 Rolls Express Itäväylä,"Linnavuorentie 30, 00950 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Happy Food Garden,"Kalevankatu, 00100 Helsinki, FI",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
@@ -128,25 +89,15 @@ Roji,"Kolmas linja 16, 00530 Helsinki",sushi cuisine,confidence:medium;cuisine:s
 Lemon Grass,"Kolmas linja 12, 00530 Helsinki",thai cuisine,confidence:medium;cuisine:thai;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
 Ravintola Vaunu,"Ratapihantie 9, 00520 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Mullikka,"Mannerheimintie 130, 00270 Helsinki","burger, wings cuisine",confidence:medium;cuisine:burger;cuisine:wings;delivery:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
-Kotipizza,"Ristipellontie 25, 00390 Helsinki",pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;fast_food;takeaway:yes,,OpenStreetMap
 Raku,"Ristipellontie 25, 00390 Helsinki","japanese, chinese cuisine",confidence:medium;cuisine:chinese;cuisine:japanese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Lintsi Cafe,"Kotkankatu 4, 00510 Helsinki, FI","coffee_shop, ice_cream, sandwich cuisine",cafe;confidence:medium;cuisine:coffee;cuisine:cream;cuisine:ice;cuisine:sandwich;cuisine:shop;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
-Roberts Coffee Citykäytävä,Aleksanterinkatu 21,"cake, coffee_shop, ice_cream, tea cuisine",cafe;confidence:medium;cuisine:cake;cuisine:coffee;cuisine:cream;cuisine:ice;cuisine:shop;cuisine:tea;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
-La Torrefazione,"Aleksanterinkatu 50 B, 00100 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:no,,OpenStreetMap
 Amarillo,"Aleksanterinkatu 46, 00100 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
-Izza,,pizza cuisine,confidence:medium;cuisine:pizza;diet:vegetarian:yes;fast_food;outdoor_seating:yes,,OpenStreetMap
 Brasserie Lionne,"Pohjoisesplanadi 37, 00100 Helsinki",french cuisine,confidence:medium;cuisine:french;outdoor_seating:yes;restaurant,,OpenStreetMap
 Ren He,Vanha viertotie 18,chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Eira Plaza,"Jääkärinkatu 15a, 00150 Helsinki, FI",pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;fast_food;outdoor_seating:no,,OpenStreetMap
 Haru Plus Sushi,"Annankatu 6, 00120 Helsinki, FI","thai, sushi cuisine",confidence:medium;cuisine:sushi;cuisine:thai;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Fredi Pizzeria,"Fredrikinkatu 61-B, 00100 Helsinki, FI","pizza, kebab, burger, vöner cuisine",confidence:medium;cuisine:burger;cuisine:kebab;cuisine:pizza;cuisine:vöner;diet:vegan:yes;outdoor_seating:no;restaurant,,OpenStreetMap
 Passio,"Kalevankatu 13, 00100 Helsinki, FI",brunch,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Kotipizza,"Roihuvuorentie 26, 00820 Helsinki",pizza cuisine,confidence:medium;cuisine:pizza;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Patisserie Teemu Aura,"Fredrikinkatu 19, 00120 Helsinki, FI",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Gurkha,"Hiihtäjäntie 1, 00810 Helsinki",nepalese cuisine,confidence:medium;cuisine:nepalese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Ho Khao,Pohjoinen Makasiinikatu 7,thai cuisine,confidence:medium;cuisine:thai;restaurant,,OpenStreetMap
-Eromanga,,,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
-Café Bar No 9,"Uudenmaankatu 9, 00120 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
 Boreal,"Uudenmaankatu 9, 00120 Helsinki, FI",local cuisine,confidence:medium;cuisine:local;restaurant,,OpenStreetMap
 Luckiefun’s Sushi Buffet Helsinki,"Lönnrotinkatu 2, 00100 Helsinki, FI",japanese cuisine,confidence:medium;cuisine:japanese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Bacco,"Pohjoisesplanadi 9, 00170 Helsinki",italian cuisine,confidence:medium;cuisine:italian;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
@@ -161,102 +112,61 @@ Unicafe,"Töölönkatu 37, 00260 Helsinki",,confidence:medium;restaurant,,OpenSt
 Ravintola Dhaka Grilli,"Näyttelijäntie 14 B, 00400 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 Trần Tịnh,"Siltasaarenkatu 3-5, 00530 Helsinki",vietnamese cuisine,confidence:medium;cuisine:vietnamese;diet:halal:no;diet:kosher:no;diet:vegan:only;diet:vegetarian:only;restaurant,,OpenStreetMap
 Kahvila Stoa,"Turunlinnantie 1, 00900 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Hungry Hub,"Töölönlahdenkatu 3, 00100 Helsinki, FI","friture, burger cuisine",confidence:medium;cuisine:burger;cuisine:friture;fast_food,,OpenStreetMap
 Chill out Cafe,"Varikkotie 4, 00900 Helsinki","sandwich, salad, burger cuisine",confidence:medium;cuisine:burger;cuisine:salad;cuisine:sandwich;diet:halal:no;diet:kosher:no;restaurant;takeaway:yes,,OpenStreetMap
 "Kampai 3""","Kolmas linja 18, 00530 Helsinki",japanese cuisine,confidence:medium;cuisine:japanese;outdoor_seating:yes;restaurant,,OpenStreetMap
 Krog Roba,Pieni Roobertinkatu 1,,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Insinöörit & Ekonomit,"Junailijanaukio 3, 00520 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Ravintola Ratamestari,"Ratamestarinkatu 11, 00520 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Mala House,"Opastinsilta 10, 00520 Helsinki",asian cuisine,confidence:medium;cuisine:asian;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
-Outrun Cafe,"Asemapäällikönkatu 3, 00520 Helsinki","international, cafe cuisine",cafe;confidence:medium;cuisine:cafe;cuisine:international;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
 Twisted Street Kitchen,"Fredrikinkatu 58, 00100 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Fazer Café,,,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
-Pizza Kebab Puotilan Säde,"Puotilan metrokatu 1, 00910 Helsinki",pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;fast_food,,OpenStreetMap
 Thai Vegan Kitchen,"Lapinlahdenkatu 9, 00180 Helsinki",thai cuisine,confidence:medium;cuisine:thai;diet:halal:yes;diet:kosher:yes;diet:vegan:only;diet:vegetarian:only;outdoor_seating:yes;restaurant;takeaway:yes,,OpenStreetMap
-Cafe Hiekka Kanneltalo,"Klaneettitie 5, 00420 Helsinki",,cafe;confidence:medium,,OpenStreetMap
 Finlandia Caviar,Eteläranta 20,,confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
 Akhanda Nepalilainen Ravintola,"Valimotie 2, 00380 Helsinki",nepalese cuisine,confidence:medium;cuisine:nepalese;diet:chicken:yes;diet:fish:yes;diet:gluten_free:yes;diet:lactose_free:yes;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant;takeaway:yes,,OpenStreetMap
 Lezzet Anatolia,"Kauppakartanonkatu 7 A, 00930 Helsinki",turkish cuisine,confidence:medium;cuisine:turkish;restaurant,,OpenStreetMap
 Karppi,"Punavuorenkatu 3, 00120 Helsinki, FI",,confidence:medium;restaurant,,OpenStreetMap
-Robert's Coffee,"Korkeavuorenkatu 7, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
 Skiffer Viiskulma,"Laivurinkatu 10, 00150 Helsinki, FI",pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
 Basbas Studio,"Pursimiehenkatu 27, 00150 Helsinki, FI",,confidence:medium;restaurant,,OpenStreetMap
-Hymy Hetki,"Uudenmaankatu 17, Helsinki, FI",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Zucchini,"Fabianinkatu 4, Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:only;restaurant,,OpenStreetMap
 Restaurant Haven,,,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Relove,"Fredrikinkatu 25, 00120 Helsinki, FI",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
 Caverna,"Yliopistonkatu 5, 00100 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:no;outdoor_seating:no;restaurant,,OpenStreetMap
 Karaz,"Lönnrotinkatu 15, 00120 Helsinki, FI",syrian cuisine,confidence:medium;cuisine:syrian;restaurant,,OpenStreetMap
 Just vege,"Vaasankatu 15, 00100 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:only;restaurant,,OpenStreetMap
-Suburritos,"Yrjönkatu 29, 00100 Helsinki, FI",mexican cuisine,confidence:medium;cuisine:mexican;diet:halal:no;diet:kosher:no;fast_food;outdoor_seating:yes,,OpenStreetMap
-Cafe Esplanad,"Pohjoisesplanadi 37, 00100 Helsinki, FI",On weekdays we serve lunch from 11.00,cafe;confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no;outdoor_seating:no,,OpenStreetMap
 Barbarossa Pizza & Kebab,Kampinkuja 2,pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;outdoor_seating:no;restaurant,,OpenStreetMap
-Fazer Café,"Bulevardi 7, 00120 Helsinki, FI",,cafe;confidence:medium;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
 Ha Noi Quan,"Urho Kekkosen katu 7, 00100 Helsinki, FI",vietnamese cuisine,confidence:medium;cuisine:vietnamese;restaurant,,OpenStreetMap
 Panorama Bistro,,,confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
-Espresso House,,coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
 Daddy Greens Pizzabar,Humalistonkatu 3,italian_pizza cuisine,confidence:medium;cuisine:italian;cuisine:pizza;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Makalu,Pikkalankatu 5,nepalese cuisine,confidence:medium;cuisine:nepalese;diet:halal:no;diet:kosher:no;outdoor_seating:no;restaurant,,OpenStreetMap
-Ihana Kahvila Baari,,coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
 Scandic Bistro Meilahti,,,confidence:medium;restaurant,,OpenStreetMap
 Deliberi,"Keskuskatu 7, 00100 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Dylan Marmoripiha,"Keskuskatu 3 A, 00100 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Cambo Thai,,thai cuisine,confidence:medium;cuisine:thai;restaurant,,OpenStreetMap
-Subway,,sandwich cuisine,confidence:medium;cuisine:sandwich;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;takeaway:yes,,OpenStreetMap
 Pastelaria Brasil,"Opastinsilta 2, 00520 Helsinki",brazilian cuisine,confidence:medium;cuisine:brazilian;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-La Torrefazione,Helsinki,coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
 Chuan Chim Thai Kitchen,"Aleksis Kiven katu 25, 00510 Helsinki",thai cuisine,confidence:medium;cuisine:thai;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Ella Pizza Kebab,,"pizza, kebab cuisine",confidence:medium;cuisine:kebab;cuisine:pizza;restaurant,,OpenStreetMap
-Café Cucca,"Kolmas linja 12, 00530 Helsinki",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Unicafe,"Unioninkatu 36, 00170 Helsinki",coffee_shop cuisine,confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
-Burger King,"Isonpellontie 7, 00720 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:no;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Fazer Café 8th Floor,"Aleksanterinkatu 52, 00100 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:no,,OpenStreetMap
-Way Bakery,"Agricolankatu 9, 00530 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
-Fazer Cafe Töölö,"Topeliuksenkatu 17, 00250 Helsinki",coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no;outdoor_seating:yes,,OpenStreetMap
 Da Spizzico,"Länsisatamankatu 36, 00220 Helsinki",italian cuisine,confidence:medium;cuisine:italian;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Qazan,"Itäkatu 1-7, 00930 Helsinki","uzbek, turkish cuisine",confidence:medium;cuisine:turkish;cuisine:uzbek;restaurant,,OpenStreetMap
 Broo,Malminkatu 16,pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
-Joe & The Juice,"Mannerheimintie 14-20, 00100 Helsinki, FI",coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Arnolds,"Mannerheimintie 20, 00100 Helsinki, FI",coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no;outdoor_seating:no,,OpenStreetMap
 Levant,"Itälahdenkatu 7, 00210 Helsinki","mediterranean, middle_eastern cuisine",confidence:medium;cuisine:eastern;cuisine:mediterranean;cuisine:middle;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Luckiefun's,,sushi cuisine,confidence:medium;cuisine:sushi;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
-Social Burgerjoint,"Kaivokatu 8, 00101 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no,,OpenStreetMap
-Jungle Juice Bar,,,confidence:medium;diet:halal:no;diet:kosher:no;fast_food;outdoor_seating:no,,OpenStreetMap
-Bistro Bron,,,cafe;confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
 Elias döner kebab,"Välimerenkatu 20, 00220 Helsinki",kebab cuisine,confidence:medium;cuisine:kebab;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Taco Bell,"Fredrikinkatu 65, 00100 Helsinki",tex-mex cuisine,confidence:medium;cuisine:tex-mex;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
 Ravintola Pisara Lauttasaari,"Itälahdenkatu 22a, 00210 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Cafe Pacifico,"Kalevankatu 17, 00100 Helsinki",,cafe;confidence:medium,,OpenStreetMap
 Ramen Ichiraku,"Urho Kekkosen katu 1, 00100 Helsinki, FI",noodle cuisine,confidence:medium;cuisine:noodle;outdoor_seating:no;restaurant,,OpenStreetMap
 Dylan Kottby Oulunkylä,"Mäkitorpantie 3, 00620 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:no;restaurant,,OpenStreetMap
-Pizzakuningas,,pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;fast_food,,OpenStreetMap
-Bonbon Coffee,"Mechelininkatu 51, 00250 Helsinki",,cafe;confidence:medium,,OpenStreetMap
 Ravinteli Olkkari,"Toinen linja 3, 00530 Helsinki, FI",A vibrant culinary living room in Helsinki,confidence:medium;diet:lactose_free:yes;diet:meat:yes;diet:pescetarian:yes;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Scolare,Fabianinkatu 19,,confidence:medium;restaurant,,OpenStreetMap
-Café Linkosuo Esplanadi,"Eteläesplanadi 8, 00130 Helsinki",,cafe;confidence:medium;outdoor_seating:no,,OpenStreetMap
 Faselli,"Helsinginkatu 21, 00530 Helsinki",italian cuisine,confidence:medium;cuisine:italian;delivery:yes;outdoor_seating:yes;restaurant;takeaway:yes,,OpenStreetMap
-Picnic,"Urho Kekkosen katu 1, 00100 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:no,,OpenStreetMap
-Robert's Coffee,"Bulevardi 1, 00100 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
 Helsingin Pizzapojat,"Vuotie 3, 00980 Helsinki",pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Biblos,"Eteläesplanadi 22, 00130 Helsinki",middle_eastern cuisine,confidence:medium;cuisine:eastern;cuisine:middle;restaurant,,OpenStreetMap
 Rue Madame,"Pohjoisesplanadi 25-27, 00100 Helsinki","italian, french cuisine",confidence:medium;cuisine:french;cuisine:italian;restaurant,,OpenStreetMap
 Elias Döner kebab & Pizzotto,"Ajomiehentie 1, 00390 Helsinki","pizza, kebab cuisine",confidence:medium;cuisine:kebab;cuisine:pizza;restaurant,,OpenStreetMap
-Metka Cafe,Myllypurontie 1,,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
 Tavola,"Maisemamaalauksenkatu 1, 00430 Helsinki",italian cuisine,confidence:medium;cuisine:italian;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
-kot.,"Kahvipavunkuja 2, 00990 Helsinki","wings, burger cuisine",confidence:medium;cuisine:burger;cuisine:wings;fast_food,,OpenStreetMap
-Fazer Cafe Lauttasaari,"Lauttasaarentie 29, 00200 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
-Fazer Café Kaisaniemi,"Kaisaniemenkatu 6, 00100 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
-Relove Café Stockmann,"Aleksanterinkatu 52, 00100 Helsinki",Kahvilassa tarjoillaan sesongittain vaihtuvia terveellisiä ihanuuksia.,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:no,,OpenStreetMap
 Sano Nepal,"Kulmavuorenkatu 4, 00500 Helsinki",indian cuisine,confidence:medium;cuisine:indian;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Omu Raisu,Kulmavuorenkatu 4,japanese cuisine,confidence:medium;cuisine:japanese;restaurant,,OpenStreetMap
 Hills Dumplings,Kalevankatu 17,,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;restaurant,,OpenStreetMap
-Mama's Empanadas,"Vaasankatu 11, 00500 Helsinki",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Majakkalaiva Relandersgrund,"Pohjoisranta 1, 00170 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant;takeaway:yes,,OpenStreetMap
-Kakkugalleria,,,cafe;confidence:medium;diet:vegetarian:yes;outdoor_seating:no,,OpenStreetMap
 Third Place,"Arkadiankatu 23, 00100 Helsinki",pasta cuisine,confidence:medium;cuisine:pasta;restaurant,,OpenStreetMap
 Ragazza,"Kahvipavunkuja 2, 00990 Helsinki",italian cuisine,confidence:medium;cuisine:italian;outdoor_seating:no;restaurant,,OpenStreetMap
-Eromanga,Sörnäistenkatu 2,,cafe;confidence:medium;diet:halal:no;diet:kosher:no,,OpenStreetMap
-Helsingin Kahvipaahtimon Päiväkahvibaari,,coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;diet:halal:no;diet:kosher:no,,OpenStreetMap
 Chinaboss,"Päivöläntie 21, 00730 Helsinki",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Noodle Story,"Linnanrakentajantie 2, 00880 Helsinki",asian cuisine,confidence:medium;cuisine:asian;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Foody,"Linnanrakentajantie 2, 00880 Helsinki",mediterranean cuisine,confidence:medium;cuisine:mediterranean;restaurant,,OpenStreetMap
@@ -267,67 +177,38 @@ Bistro K,Hämeentie 68,,confidence:medium;diet:halal:no;diet:kosher:no;restauran
 Sotto Pizzeria Sompasaari,"Kaljaasi Fortunan katu 1, 00540 Helsinki",pizza cuisine,confidence:medium;cuisine:pizza;delivery:yes;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant;takeaway:yes,,OpenStreetMap
 Rioni Helsinki,"Kasarmikatu 25, 00130 Helsinki",georgian cuisine,confidence:medium;cuisine:georgian;outdoor_seating:yes;restaurant,,OpenStreetMap
 Inferno Kebab ja Pizza,"Rullakkokatu 3, 00240 Helsinki","kebab, pizza cuisine",confidence:medium;cuisine:kebab;cuisine:pizza;outdoor_seating:no;restaurant,,OpenStreetMap
-Khao Gaeng Thai Street Food,Urho Kekkosen katu 1,thai cuisine,confidence:medium;cuisine:thai;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Rax Pizzabuffet,Urho Kekkosen katu 1,pizza cuisine,confidence:medium;cuisine:pizza;fast_food;outdoor_seating:no,,OpenStreetMap
-Hav A Java,"Unioninkatu 41, 00170 Helsinki","buffet, coffee_shop cuisine",cafe;confidence:medium;cuisine:buffet;cuisine:coffee;cuisine:shop;outdoor_seating:no,,OpenStreetMap
 Lopez Tacos,Urho Kekkosen katu 1,mexican cuisine,confidence:medium;cuisine:mexican;outdoor_seating:no;restaurant,,OpenStreetMap
-Zhao Tea,Ateneuminkuja 2,bubble_tea cuisine,cafe;confidence:medium;cuisine:bubble;cuisine:tea;diet:vegetarian:only;outdoor_seating:yes,,OpenStreetMap
 YLE STUDIO 10,"Uutiskatu 8, 00240 Helsinki",Operated by Garam & Vermiglio catering Oy,confidence:medium;restaurant,,OpenStreetMap
-Gateau,,,cafe;confidence:medium;diet:vegetarian:yes;outdoor_seating:no,,OpenStreetMap
-Seksico Viiskulma,"Laivurinkatu 10, 00150 Helsinki",tacos cuisine,confidence:medium;cuisine:tacos;fast_food;outdoor_seating:yes,,OpenStreetMap
 My Salad Bar,"Kaivokatu 1, 00100 Helsinki",salad cuisine,confidence:medium;cuisine:salad;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
 Chitir Chicken,"Vilhonvuorenkatu 3, 00500 Helsinki",chicken cuisine,confidence:medium;cuisine:chicken;outdoor_seating:no;restaurant,,OpenStreetMap
-Fazer Café,Annankatu 28,"coffee_shop, cake, salad, sandwich cuisine",cafe;confidence:medium;cuisine:cake;cuisine:coffee;cuisine:salad;cuisine:sandwich;cuisine:shop;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
-Snacky,"Huopalahdentie 1, 00330 Helsinki",burger cuisine,confidence:medium;cuisine:burger;fast_food;takeaway:yes,,OpenStreetMap
 Cafe Kim,Miina Sillanpään katu 1,Lounaskahvila,confidence:medium;cuisine:vietnamese;restaurant,,OpenStreetMap
-Pupu,"Fredrikinkatu 65, 00100 Helsinki, FI",,cafe;confidence:medium;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
 Laulu,"Hietaniemenkatu 2, 00100 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 Vibami,Kluuvi,vietnamese cuisine,confidence:medium;cuisine:vietnamese;outdoor_seating:yes;restaurant,,OpenStreetMap
 Alexanderplats,"Eteläesplanadi 22, 00130 Helsinki",,confidence:medium;outdoor_seating:yes;restaurant,,OpenStreetMap
-Chatime,,bubble_tea cuisine,cafe;confidence:medium;cuisine:bubble;cuisine:tea;outdoor_seating:no,,OpenStreetMap
-Helmisimpukka Helsinki Käpylä,"Vaakalinnuntie 1-3, 00610 Helsinki",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
-Kahvila ja ravintola Valokaari,"Kaarelan raitti 2, 00430 Helsinki",,cafe;confidence:medium,,OpenStreetMap
-Kakkugalleria,"Siltasaarenkatu 13, 00530 Helsinki",bakery cuisine,cafe;confidence:medium;cuisine:bakery;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
 Brindavan,,"indian, international cuisine",confidence:medium;cuisine:indian;cuisine:international;diet:vegan:only;diet:vegetarian:only;restaurant,,OpenStreetMap
 Norppa Base,"Tenderinlenkki 8, 00520 Helsinki",japanese cuisine,confidence:medium;cuisine:japanese;diet:fish:yes;diet:meat:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Chitir Chicken Pasila,"Höyrykatu 8, 00520 Helsinki",chicken cuisine,confidence:medium;cuisine:chicken;restaurant,,OpenStreetMap
-Bagdad Cafe,,,cafe;confidence:medium,,OpenStreetMap
 Kansis,"Kansakoulukuja 1, 00100 Helsinki",,confidence:medium;outdoor_seating:no;restaurant,,OpenStreetMap
 Pancho Villa,"Kirkonkyläntie 11, 00700 Helsinki, FI",mexican cuisine,confidence:medium;cuisine:mexican;diet:dairy_free:yes;diet:gluten_free:yes;diet:lactose_free:yes;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant;takeaway:yes,,OpenStreetMap
-Unicafe,"Vuorikatu 7, 00100 Helsinki",,cafe;confidence:medium,,OpenStreetMap
 Vene Bar & Bistro,"Koirasaarentie 43, 00590 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 HSS Paviljonki,"Liuskasaari 1, 00140 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Tandoori Cuisine,"Lehtisaarentie 2, 00340 Helsinki",,confidence:medium;diet:gluten_free:yes;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
-McDonald's,"Itäkatu 1-5, 00930 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Matcha Crew,"Lapinlahdenkatu 19, 00180 Helsinki",teahouse cuisine,cafe;confidence:medium;cuisine:teahouse,,OpenStreetMap
-Friends & Brgrs Kulttuurikasarmi,"Narinkka 2, 00100 Helsinki",burger cuisine,confidence:medium;cuisine:burger;delivery:no;diet:chicken:yes;diet:gluten_free:yes;diet:meat:yes;diet:non-vegetarian:yes;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:yes,,OpenStreetMap
 Tawook Lab,,,confidence:medium;outdoor_seating:yes;restaurant,,OpenStreetMap
-Plants By Us,Mannerheimintie 14-20,"sandwich, smoothie, salad, juice cuisine",confidence:medium;cuisine:juice;cuisine:salad;cuisine:sandwich;cuisine:smoothie;diet:vegan:only;diet:vegetarian:only;fast_food;outdoor_seating:no,,OpenStreetMap
 Itsuyaki,"Itäkatu 1-5, 00930 Helsinki",japanese cuisine,confidence:medium;cuisine:japanese;restaurant,,OpenStreetMap
 Speakeasy,"Itäkatu 1-5, 00930 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Square,"Urho Kekkosen katu 1, 00100 Helsinki",,cafe;confidence:medium;outdoor_seating:no,,OpenStreetMap
 Muji Ravintola,,,confidence:medium;outdoor_seating:no;restaurant,,OpenStreetMap
 Momotoko,,asian cuisine,confidence:medium;cuisine:asian;outdoor_seating:no;restaurant,,OpenStreetMap
-Friends & Brgrs,"Messuaukio 1, 00520 Helsinki, FI",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
 Hanko Aasia,"Messuaukio 1, 00520 Helsinki",asian cuisine,confidence:medium;cuisine:asian;outdoor_seating:no;restaurant,,OpenStreetMap
-Shin Café,,,cafe;confidence:medium;outdoor_seating:no,,OpenStreetMap
 Aito Fresh,,,confidence:medium;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant;takeaway:yes,,OpenStreetMap
-Kotipizza,Kauppakartanonkatu 16a,pizza cuisine,confidence:medium;cuisine:pizza;fast_food;takeaway:yes,,OpenStreetMap
-Cafe Amore,Telakkakatu 2B,Homemade Crepes,cafe;confidence:medium,,OpenStreetMap
 Indus,"Eteläesplanadi 4, 00130 Helsinki",indian cuisine,confidence:medium;cuisine:indian;restaurant,,OpenStreetMap
 Gina,,italian cuisine,confidence:medium;cuisine:italian;outdoor_seating:no;restaurant,,OpenStreetMap
 Skifferi,,,confidence:medium;outdoor_seating:no;restaurant,,OpenStreetMap
-OMA Kahvila-Ravintola,"Puutarhurinkuja 2, 00300 Helsinki",,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Sodexo Metropolia Myllypuro,"Myllypurontie 1, 00920 Helsinki",,confidence:medium;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
-Vallisaaren satamakahvila,Vallisaarenpolku 134,,cafe;confidence:medium;outdoor_seating:yes,,OpenStreetMap
 Le Grec,Rikhardinkatu 2,greek cuisine,confidence:medium;cuisine:greek;outdoor_seating:yes;restaurant,,OpenStreetMap
 Lohtu,,,confidence:medium;diet:vegan:only;diet:vegetarian:only;outdoor_seating:no;restaurant,,OpenStreetMap
 Ravintola Akseli,"Ilmalankuja 3, 00240 Helsinki",Lunch is served Mo-Fr 10:30-13:30.,confidence:medium;cuisine:coffee;cuisine:lunch;cuisine:salad;cuisine:shop;cuisine:soup;diet:gluten_free:yes;diet:halal:no;diet:kosher:no;diet:lactose_free:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
-Diwan Bagdad Sweet's,,,cafe;confidence:medium,,OpenStreetMap
 Uyghur Noodle House,"Siltasaarenkatu 13, 00530 Helsinki",Lunch prices are from 11:00 to 14:00.,confidence:medium;cuisine:uyghur;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
 FLQ,"Tallinnanaukio 4, 00930 Helsinki",asian cuisine,confidence:medium;cuisine:asian;restaurant,,OpenStreetMap
-Seksico Tacos & Cocktails,"Kolmas linja 11, 00530 Helsinki",mexican cuisine,confidence:medium;cuisine:mexican;fast_food;outdoor_seating:yes,,OpenStreetMap
-Roasberg,"Siltasaarenkatu 13, 00530 Helsinki",,cafe;confidence:medium,,OpenStreetMap
 Dylan Luft,"Ilmalantori 4, 00240 Helsinki",Lunch is served Mo-Fr 10:30-14:00.,confidence:medium;cuisine:coffee;cuisine:lunch;cuisine:salad;cuisine:shop;cuisine:soup;diet:gluten_free:yes;diet:halal:no;diet:kosher:no;diet:lactose_free:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,OpenStreetMap
 Ravintola Santpauli,Tehtaankatu 21,"german, european cuisine",confidence:medium;cuisine:european;cuisine:german;diet:meat:yes;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Ihana Sushi,,sushi cuisine,confidence:medium;cuisine:sushi;restaurant,,OpenStreetMap
@@ -341,18 +222,10 @@ Dylan La Ilma,"Ilmalanrinne 1, 00240 Helsinki",Lunch is server Mo-Fr 10:30-14:00
 Hansa Café Bar & Brasserie,,"burger, salad cuisine",confidence:medium;cuisine:burger;cuisine:salad;outdoor_seating:yes;restaurant,,OpenStreetMap
 Mr.Pastrami,Insinöörinkatu 12,sandwich cuisine,confidence:medium;cuisine:sandwich;restaurant,,OpenStreetMap
 Gastro Hub,Unioninkatu 30,georgian cuisine,confidence:medium;cuisine:georgian;diet:vegetarian:yes;outdoor_seating:no;restaurant,,OpenStreetMap
-Starbucks,,coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;outdoor_seating:no;takeaway:yes,,OpenStreetMap
-Burger King,"Kaivokatu 1, 00100 Helsinki",burger cuisine,confidence:medium;cuisine:burger;fast_food;takeaway:yes,,OpenStreetMap
-Fazer Café Vallila,"Aleksis Kiven katu 5, 00500 Helsinki","coffee_shop, breakfast, lunch cuisine",cafe;confidence:medium;cuisine:breakfast;cuisine:coffee;cuisine:lunch;cuisine:shop,,OpenStreetMap
-Gateau,"Urho Kekkosen katu 1, 00100 Helsinki",,cafe;confidence:medium;outdoor_seating:no,,OpenStreetMap
 Villa Nepal,,indian cuisine,confidence:medium;cuisine:indian;outdoor_seating:no;restaurant,,OpenStreetMap
 Seoul Good,"Kantelettarentie 1, 00420 Helsinki",korean cuisine,confidence:medium;cuisine:korean;restaurant,,OpenStreetMap
 Faro Channelside Bar & Restaurant,"Kellosaarenranta 2, 00180 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:yes;restaurant,,OpenStreetMap
-King Kebab,Kaivonkatsojantie 8,kebab cuisine,confidence:medium;cuisine:kebab;fast_food,,OpenStreetMap
 Old Captain,"Capellanranta 4b, 00580 Helsinki","Avautunut xx.12.2025. Liiketilassa ollut ennen Fivetti,  Hummus House ja ravintola Palm.",confidence:medium;cuisine:burger;cuisine:pizza;restaurant,,OpenStreetMap
-Burger King,,burger cuisine,confidence:medium;cuisine:burger;fast_food;takeaway:yes,,OpenStreetMap
-Joe & The Juice,"Itäkatu 1-7, 00930 Helsinki",coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop;takeaway:yes,,OpenStreetMap
-Waffle Café,,,cafe;confidence:medium,,OpenStreetMap
 14 Peaks,"Siltasaarenkatu 13, 00530 Helsinki",,confidence:medium;diet:vegan:yes;restaurant,,OpenStreetMap
 Bistro Bardot,"Kluuvikatu 1, 00100 Helsinki",french cuisine,confidence:medium;cuisine:french;restaurant,,OpenStreetMap
 Pizza Box,,pizza cuisine,confidence:medium;cuisine:pizza;restaurant,,OpenStreetMap
@@ -367,18 +240,13 @@ Krung Thep Thai Bistro,"Bermudankatu 5, 00220 Helsinki",thai cuisine,confidence:
 Shin Ramen & BRGRS Sompasaari,Aallonhalkoja 1,,confidence:medium;restaurant,,OpenStreetMap
 Ravintola Huudi,"Huopalahdentie 24, 00350 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 Robusto,,,confidence:medium;restaurant,,OpenStreetMap
-Chitir Chicken,"Vanha Helsingintie 20, 00700 Helsinki",chicken cuisine,confidence:medium;cuisine:chicken;fast_food,,OpenStreetMap
 Ravintola Rouhea,"Teollisuuskatu 33, 00510 Helsinki",,confidence:high;restaurant,2025-09-01,OpenStreetMap
 Jojo Dumplings,Aallonhalkoja 1,chinese cuisine,confidence:medium;cuisine:chinese;restaurant,,OpenStreetMap
 Kanokchai,Cygnaeuksenkatu 5,thai cuisine,confidence:medium;cuisine:thai;restaurant,,OpenStreetMap
-Pizza Express,,pizza cuisine,confidence:medium;cuisine:pizza;fast_food;outdoor_seating:yes,,OpenStreetMap
 Nanapo,Fredrikinkatu 46,sushi cuisine,confidence:medium;cuisine:sushi;restaurant,,OpenStreetMap
-,,,cafe;confidence:medium,,OpenStreetMap
 Hanoi Vietnam,,vietnamese cuisine,confidence:medium;cuisine:vietnamese;restaurant,,OpenStreetMap
 Mikivi,"Fredrikinkatu 58, 00100 Helsinki, FI",asian cuisine,confidence:medium;cuisine:asian;restaurant,,OpenStreetMap
 Antell Berlin/Vallila,"Elimäenkatu 25-27, 00510 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Arnolds,,donut cuisine,confidence:medium;cuisine:donut;fast_food;outdoor_seating:yes,,OpenStreetMap
-Wohveli Café,,,cafe;confidence:medium;outdoor_seating:no,,OpenStreetMap
 Fry Day,,asian cuisine,confidence:medium;cuisine:asian;restaurant,,OpenStreetMap
 Mian,,asian cuisine,confidence:medium;cuisine:asian;restaurant,,OpenStreetMap
 Ravintola Kampung,,asian cuisine,confidence:medium;cuisine:asian;restaurant,,OpenStreetMap
@@ -388,30 +256,17 @@ Erenn Kitchen & More,"Klaneettitie 12, 00420 Helsinki",turkish cuisine,confidenc
 Ravintola Nepali Food,"Sitratie 7, 00420 Helsinki",nepalese cuisine,confidence:medium;cuisine:nepalese;delivery:yes;restaurant;takeaway:yes,,OpenStreetMap
 Luckiefun's Sushibuffet,,"japanese, sushi, buffet cuisine",confidence:medium;cuisine:buffet;cuisine:japanese;cuisine:sushi;outdoor_seating:no;restaurant,,OpenStreetMap
 Backyard,"Itäkatu 1-7, 00930 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Alejandro's Empanadas,"Bruno Granholmin kuja, 00510 Helsinki",coffee_shop cuisine,cafe;confidence:medium;cuisine:coffee;cuisine:shop,,OpenStreetMap
 Winest,Unioninkatu 30,georgian cuisine,confidence:medium;cuisine:georgian;outdoor_seating:yes;restaurant,,OpenStreetMap
-The Good Coffee Company,Eerikinkatu 33,austrian cuisine,cafe;confidence:medium;cuisine:austrian,,OpenStreetMap
 Bonito,Rikhardinkatu 4,,confidence:medium;restaurant,,OpenStreetMap
-McDonald's,Tyynenmerenkatu 9,,confidence:medium;fast_food,,OpenStreetMap
-18grams,Livornonkatu 6,,cafe;confidence:medium,,OpenStreetMap
-Belle Baguette,Jätkäsaarenkuja 13,french cuisine,cafe;confidence:medium;cuisine:french,,OpenStreetMap
 Ylistalo,,,confidence:medium;restaurant,,OpenStreetMap
-Brita,,,cafe;confidence:medium,,OpenStreetMap
 Ekeko Restobar,"Vilhonvuorenkatu 3, 00500 Helsinki",latin_american cuisine,confidence:medium;cuisine:american;cuisine:latin;restaurant,,OpenStreetMap
-Café Brutale,"Kalkkihiekantie 2, 00980 Helsinki",,cafe;confidence:medium,,OpenStreetMap
-Café Noir,"Pohjoisesplanadi 35, 00100 Helsinki",,cafe;confidence:medium,,OpenStreetMap
 Mondo Pizza,"Meri-Rastilan kuja 2, 00980 Helsinki",pizza cuisine,confidence:medium;cuisine:pizza;delivery:yes;restaurant;takeaway:yes,,OpenStreetMap
-EMPIRE Shisha Bar,"Meri-Rastilan kuja 2, 00980 Helsinki",,cafe;confidence:medium,,OpenStreetMap
 Sodexo Helsingin yliopisto Päärakennus,,,confidence:medium;outdoor_seating:no;restaurant,,OpenStreetMap
 Wave of flavours,"Sturenkatu 28, 00550 Helsinki",portuguese cuisine,confidence:medium;cuisine:portuguese;restaurant,,OpenStreetMap
-Pronto,,,cafe;confidence:medium;outdoor_seating:no,,OpenStreetMap
 Greenfinch,"Porkkalankatu 36, 00180 Helsinki, FI",,confidence:medium;restaurant,,OpenStreetMap
-Seksico,,mexican cuisine,confidence:medium;cuisine:mexican;fast_food,,OpenStreetMap
 Officine Brera,"Telakkakatu 10, 00150 Helsinki",italian cuisine,confidence:medium;cuisine:italian;restaurant,,OpenStreetMap
 Esmes,"Iso Roobertinkatu 24, 00120 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 Demo,"Itämerenkatu 25, 00180 Helsinki, FI",nordic cuisine,confidence:medium;cuisine:nordic;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Diamond Star Oy (Teboil Malmi),"Laulurastaantie 2, 00780 Helsinki",,cafe;confidence:medium,,OpenStreetMap
-KFC,,chicken cuisine,confidence:medium;cuisine:chicken;fast_food;outdoor_seating:no;takeaway:yes,,OpenStreetMap
 Daruma Kitchen,Verkkoneula 6,"asian, japanese cuisine",confidence:medium;cuisine:asian;cuisine:japanese;restaurant,,OpenStreetMap
 Unicafe,"Haartmaninkatu 3, 00290 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 Ravintola Sitara,,,confidence:medium;restaurant,,OpenStreetMap
@@ -419,34 +274,20 @@ Unicafe,"Haartmaninkatu 4, 00290 Helsinki",,confidence:medium;restaurant,,OpenSt
 Unicafe,"Viikinkaari 5, 00790 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 Tropic Café,"Olavinlinnantie 6, 00900 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 Vazi,"Konttisatamankatu 2, 00540 Helsinki",georgian cuisine,confidence:medium;cuisine:georgian;restaurant,,OpenStreetMap
-Puolenkuun Pelit Helsinki,Keskuskatu 3 A,,cafe;confidence:medium,,OpenStreetMap
 Uyghur Noodle House,Malminrinne 3,"asian, noodles cuisine",confidence:medium;cuisine:asian;cuisine:noodles;restaurant,,OpenStreetMap
 Itsuyaki,,asian cuisine,confidence:medium;cuisine:asian;outdoor_seating:no;restaurant,,OpenStreetMap
 Miss Yao,,asian cuisine,confidence:medium;cuisine:asian;restaurant,,OpenStreetMap
-Cafe Kuppi,,,cafe;confidence:medium;outdoor_seating:no,,OpenStreetMap
 Ravintola Loru,"Itälahdenkatu 27, 00210 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
 The Tart,"Yrjönkatu 2, 00120 Helsinki",british cuisine,confidence:medium;cuisine:british;restaurant,,OpenStreetMap
 Presto Pizza,,pizza cuisine,confidence:medium;cuisine:pizza;restaurant;takeaway:yes,,OpenStreetMap
-Stadin Chili Kebab,"Vuotie 45, 00980 Helsinki",,confidence:medium;fast_food,,OpenStreetMap
-Mashawina,,syrian cuisine,confidence:medium;cuisine:syrian;fast_food,,OpenStreetMap
 Nemrut pizza kebab,"Pakilantie 38, 00630 Helsinki","pizza, kebab cuisine",confidence:medium;cuisine:kebab;cuisine:pizza;restaurant,,OpenStreetMap
-Fafa's,Pitäjänmäentie 19,,confidence:medium;fast_food,,OpenStreetMap
 Digla,,middle_eastern cuisine,confidence:medium;cuisine:eastern;cuisine:middle;restaurant,,OpenStreetMap
 Zahiiba,,somali cuisine,confidence:medium;cuisine:somali;restaurant,,OpenStreetMap
 Ravintola Base Camp,Mannerheimintie 3,nepalese cuisine,confidence:medium;cuisine:nepalese;diet:chicken:yes;diet:meat:yes;diet:non-vegetarian:yes;diet:vegan:yes;diet:vegetarian:yes;restaurant,,OpenStreetMap
 Herkkuhetki Pitäjänmäki Tali,,,confidence:medium;restaurant,,OpenStreetMap
 Krung Thep Thai Bistro Oulunkylä,"Käskynhaltijantie 38, 00640 Helsinki",thai cuisine,confidence:medium;cuisine:thai;restaurant,,OpenStreetMap
-McDonald's,"Laivalahdenkatu 1, 00880 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;takeaway:yes,,OpenStreetMap
-McDonald's,"Aamuruskontie 2, 00750 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
-Villa Ullas,"Kallvikinniementie 6, 00980 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
-McDonald's,"Kaivonkatsojantie 1 A, 00980 Helsinki",burger cuisine,confidence:medium;cuisine:burger;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
 Ravintola Alia,"Mustikkamaankuja 1, 00570 Helsinki",,confidence:medium;restaurant,,OpenStreetMap
-Cafe Regatta,"Merikannontie 8, Helsinki, FI",regional cuisine,cafe;confidence:medium;cuisine:regional;diet:vegan:yes,,OpenStreetMap
 Blue Peter,"Vattuniemen puistotie 1, 00210 Helsinki",regional cuisine,confidence:medium;cuisine:regional;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
-Hesburger,"Ristipellontie 11, 00390 Helsinki, FI",burger cuisine,confidence:medium;cuisine:burger;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
-Paseo,"Itälahdenpolku 2, 00210 Helsinki",,cafe;confidence:medium;diet:halal:no;diet:kosher:no;diet:vegetarian:yes;outdoor_seating:yes,,OpenStreetMap
-Juggebar,,,cafe;confidence:medium,,OpenStreetMap
-McDonald's,"Kivikonlaita 2, 00940 Helsinki",burger cuisine,confidence:medium;cuisine:burger;delivery:yes;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;fast_food;outdoor_seating:yes;takeaway:yes,,OpenStreetMap
 Ravintola Karhu,,,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,OpenStreetMap
 Tawook Lab,"Citykäytävä, Aleksanterinkatu 21, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Osteria dei Gusti,"Töölönkatu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:italian_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
@@ -455,57 +296,31 @@ Restaurant HOKU,"Urho Kekkosen katu 1, 00100 Helsinki, Finland",Google Places ca
 Restaurant Savotta,"Aleksanterinkatu 22, 00170 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Lappi Ravintola,"Annankatu 22, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Ravintola Ragu,"Ludviginkatu 3-5, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Restaurant Konstan Möljä,"Hietalahdenkatu 14, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Restaurant Fusion - Kamppi,"Urho Kekkosen katu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:bar_and_grill;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Ravintola Emo,"Kasarmikatu 44, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Hills Dumplings,"Kalevankatu 17, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:asian_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Ravintola Nokka,"Kanavaranta 7 F, 00160 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Restaurant Pompier,"Eteläesplanadi 8, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:french_restaurant;type:italian_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Ravintola Vinkkeli,"Pieni Roobertinkatu 8, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Restaurant Karaz,"Lönnrotinkatu 15, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Restaurant Olivia - Kluuvi,"Aleksanterinkatu 9, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:italian_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Restaurant Gaijin,"Bulevardi 6, 00120 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:asian_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Savoy,"Eteläesplanadi 14, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:fine_dining_restaurant;type:food;type:french_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Restaurant Gran Delicato,"Kalevankatu 34, Albertinkatu 31, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:greek_restaurant;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
 99 TopMeal,"Mikonkatu 8, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Enchanté Café,"Eerikinkatu 9, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bakery;type:cafe;type:establishment;type:food;type:food_store;type:point_of_interest;type:store,,Google Places (Text Search)
-Café Esplanad,"Pohjoisesplanadi 37, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bakery;type:bar;type:cafe;type:coffee_shop;type:confectionery;type:dessert_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:store;type:wine_bar,,Google Places (Text Search)
-Fazer Café Kluuvikatu,"Kluuvikatu 3, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bakery;type:cafe;type:confectionery;type:deli;type:dessert_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:store,,Google Places (Text Search)
-Café Engel,"Aleksanterinkatu 26, 00170 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:breakfast_restaurant;type:cafe;type:dessert_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Cafetoria Café & Shop,"Runeberginkatu 31, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:cafeteria;type:coffee_shop;type:confectionery;type:dessert_shop;type:establishment;type:food;type:food_store;type:ice_cream_shop;type:point_of_interest;type:store,,Google Places (Text Search)
-Café Aalto,"Pohjoisesplanadi 39, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:diner;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Ekberg 1852,"Bulevardi 9, 00120 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bakery;type:breakfast_restaurant;type:cafe;type:confectionery;type:dessert_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
-Kaffa Roastery,"Pursimiehenkatu 29, 00150 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:store;type:wholesaler,,Google Places (Text Search)
-Johan & Nyström - Kanavaranta,"Kanavaranta 7C-D 7C-D, 00160 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:store;type:tea_house;type:wholesaler,,Google Places (Text Search)
-Ihana Kahvila Baari,"Aleksanterinkatu 7 9, 00101 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:cafe;type:establishment;type:food;type:point_of_interest,,Google Places (Text Search)
-La Torrefazione,"Aleksanterinkatu 50, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:breakfast_restaurant;type:brunch_restaurant;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
-Cafe Regatta,"Merikannontie 8, 00260 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:point_of_interest,,Google Places (Text Search)
-Tintin Juurilla,"Lönnrotinkatu 33 35, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bakery;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
-The Good Coffee Company,"Eerikinkatu 33, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
-Helkatti Cat Cafe,"Fredrikinkatu 55, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:cat_cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
-Robert's Coffee Jugend,"Pohjoisesplanadi 19, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:coffee_shop;type:confectionery;type:dessert_shop;type:establishment;type:food;type:food_store;type:ice_cream_shop;type:point_of_interest;type:store,,Google Places (Text Search)
-Cafe Pacifico,"Kalevankatu 17, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:bar_and_grill;type:brunch_restaurant;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
-Andante Coffee,"Fredrikinkatu 20, 00120 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:point_of_interest,,Google Places (Text Search)
-Ravintola Green Hippo Punavuori,"Punavuorenkatu 2, 00120 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:breakfast_restaurant;type:brunch_restaurant;type:cafe;type:establishment;type:fast_food_restaurant;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store;type:vegan_restaurant;type:vegetarian_restaurant,,Google Places (Text Search)
-Cafferino Oba,"Kalevankatu 47, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
+Kosmos,"Kalevankatu 3, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
+Restaurant Fisken på Disken,"Urho Kekkosen katu 1 5. kerros, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant;type:seafood_restaurant,,Google Places (Text Search)
+Restaurant Farang,"Arkadiankatu 6, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:asian_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant;type:thai_restaurant,,Google Places (Text Search)
+Kappeli,"Eteläesplanadi 1, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
+Ravintola Karl-Johan,"Yrjönkatu 21, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Street Canteen,"Mannerheimintie 3, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Raan Khao Gaeng Thai Street Food,"Urho Kekkosen katu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant;type:thai_restaurant,,Google Places (Text Search)
-Restaurant Twisted Street Kitchen,"Fredrikinkatu 58, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Restaurant Tokyo Street,"Hietalahden Kauppahalli, Lönnrotinkatu 34, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:japanese_restaurant;type:point_of_interest;type:ramen_restaurant;type:restaurant,,Google Places (Text Search)
+Restaurant Twisted Street Kitchen,"Fredrikinkatu 58, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Zaap Isan Thai Street Food Rautatie,"Töölönlahdenkatu 3, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant;type:thai_restaurant,,Google Places (Text Search)
 Mojo Street Food,"Aleksis Kiven katu 12 D 113, 00500 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Restaurant Morton,"Ruoholahdenranta 8, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:american_restaurant;type:breakfast_restaurant;type:cafe;type:dog_cafe;type:establishment;type:food;type:hamburger_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Sherpa Food N' Bar,"Harjutori 2, 00500 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Hietalahden kauppahalli,"Lönnrotinkatu 34, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:market;type:point_of_interest;type:restaurant;type:tourist_attraction,,Google Places (Text Search)
-16 Boom,"Snellmaninkatu 16, 00170 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:asian_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Phở Nokis,"Urho Kekkosen katu 1 2 kerros, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant;type:vietnamese_restaurant,,Google Places (Text Search)
 JokuRoti,"Hietaniemenkatu 2, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Fafa's Iso Roba,"Iso Roobertinkatu 2, 00120 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:point_of_interest;type:restaurant;type:vegan_restaurant;type:vegetarian_restaurant,,Google Places (Text Search)
 Hummus House street,"Hermannin rantatie 5, 00580 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:middle_eastern_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Street Bar,"Hämeentie 10, 00530 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:bar_and_grill;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Mala Master Iso Roba,"Iso Roobertinkatu 20 22, 00120 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:chinese_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Ravintola Ginn,"Länsisatamankatu 31, 00220 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:asian_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Hanami Vallila,"Sturenkatu 31, 00550 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
+Pretty Boy Kamppi,"Malminrinne 2-4, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:american_restaurant;type:establishment;type:food;type:hamburger_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Biblos,"Eteläesplanadi 22, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Seksico® City Bodega,"Saarisen Piha, Kaivokatu 8, 00101 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Seoul Good Kluuvi,"Kauppakeskus Kluuvi, Aleksanterinkatu 9 1.krs, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:asian_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
@@ -515,48 +330,30 @@ Itsuyaki Forum,"Mannerheimintie 20 FORUM 3.krs, 00100 Helsinki, Finland",Google 
 Dip and Sip,"Helsinginkatu 13, 00500 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Restaurant Nefer Nefer Nefer,"Erottajankatu 4, 00120 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Old Captain Kalasatama Helsinki,"Capellanranta 4 b, 00580 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
+Ramen Ichiraku,"Urho Kekkosen katu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:japanese_restaurant;type:point_of_interest;type:ramen_restaurant;type:restaurant,,Google Places (Text Search)
 Bistro Bardot,"Kluuvikatu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:french_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Bistro Le Coin,"Siltasaarenkatu 10, 00530 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:french_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Restaurant Dagmar Bistro & Wine Bar,"Dagmarinkatu 4, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:establishment;type:food;type:point_of_interest;type:restaurant;type:wine_bar,,Google Places (Text Search)
 Bistro O mat Hakaniemi,"Toinen linja 7 Lyyra toimistotalo, 9. krs, 00530 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:french_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Bistro Miljöö,"Runeberginkatu 40, 00260 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Sofia Bistro,"Aleksanterinkatu 28, Unioninkatu 27, 00170 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
 Bistro Manu,"Eteläinen Rautatiekatu 4, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 The Social Bar & Bistro,"Fredrikinkatu 51, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Muteh Cafe-Bistro,"Mechelininkatu 12-14 L4, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Bistro Vilho,"Mikonkatu 23, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Saigon Bistro,"Kaarlenkatu 13, 00530 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store;type:vietnamese_restaurant,,Google Places (Text Search)
 Restaurant Quartier,"Korkeavuorenkatu 4, 00150 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Restaurant Gillet Bar & Bistro,"Kasarmikatu 23, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:event_venue;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Bouchon Carême,"Aleksanterinkatu 13, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:french_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
+Restaurant Gillet Bar & Bistro,"Kasarmikatu 23, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:event_venue;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Ateneum Bistro,"Kaivokatu 2, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Bistro Qulma,"Mariankatu 13B, 00170 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:buffet_restaurant;type:establishment;type:food;type:point_of_interest;type:restaurant;type:wine_bar,,Google Places (Text Search)
-Bistro K,"Hämeentie 68, 00550 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:establishment;type:event_venue;type:food;type:performing_arts_theater;type:point_of_interest;type:restaurant;type:vegetarian_restaurant;type:wine_bar,,Google Places (Text Search)
 Finlandia Bistro,"Mannerheimintie 13e, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Brasserie Lionne,"Pohjoisesplanadi 37, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:french_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Bistro Gina,"Korkeavuorenkatu 34, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:italian_restaurant;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Food Market Herkku,"Aleksanterinkatu 52, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:food_store;type:grocery_store;type:point_of_interest;type:store,,Google Places (Text Search)
+Bistro Five,"Helsinginkatu 4, 00500 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:fast_food_restaurant;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 SOUP+MORE Vanha Kauppahalli,"Eteläranta 1, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Kortteli,"Urho Kekkosen katu 1 5. kerros, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:fitness_center;type:food;type:food_court;type:gym;type:hair_care;type:hair_salon;type:health;type:point_of_interest;type:restaurant;type:sports_activity_location;type:sports_complex;type:store;type:yoga_studio,,Google Places (Text Search)
-Old Market Hall,"Eteläranta, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:butcher_shop;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:market;type:point_of_interest;type:restaurant;type:store;type:tourist_attraction,,Google Places (Text Search)
 Hakaniemen kauppahalli,"Hakaniemen kauppahalli, Hämeentie 1, 00530 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:food_court;type:market;type:point_of_interest;type:restaurant;type:tourist_attraction,,Google Places (Text Search)
-PSH-LOVE-KA by PyShburg,"Simonkatu 10, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:coffee_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
 Sizzle Station Fennia,"Vuorikatu 14, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Ester's Grocery,"Korkeavuorenkatu 6, 00150 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bar;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:sandwich_shop;type:store,,Google Places (Text Search)
-Kauppatori,"Eteläranta, 00170 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:establishment;type:food;type:market;type:point_of_interest;type:restaurant;type:tourist_attraction,,Google Places (Text Search)
-Kamppi Helsinki,"Urho Kekkosen katu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:cafe;type:clothing_store;type:electronics_store;type:establishment;type:fitness_center;type:food;type:gym;type:hair_care;type:hair_salon;type:health;type:home_goods_store;type:point_of_interest;type:restaurant;type:shopping_mall;type:sports_activity_location;type:sports_complex;type:store;type:yoga_studio,,Google Places (Text Search)
-Restaurant Story,"Vanha Kauppahalli, Eteläranta, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:breakfast_restaurant;type:brunch_restaurant;type:cafe;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Arctic Delice (Brand Store Helsinki),"Eteläranta 125, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:food_store;type:point_of_interest;type:store,,Google Places (Text Search)
-S-market Sokos Helsinki,"Mannerheimintie 9, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:food_store;type:grocery_store;type:point_of_interest;type:store;type:supermarket,,Google Places (Text Search)
 Stadin Herkku,"Vanha kauppahalli 21, Eteläranta 1, 00130 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:catering_service;type:establishment;type:food;type:food_delivery;type:point_of_interest;type:restaurant,,Google Places (Text Search)
-Fazer Café Kamppi,"Kauppakeskus Kamppi, 1st Floor, Urho Kekkosen katu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bakery;type:cafe;type:confectionery;type:deli;type:dessert_shop;type:establishment;type:food;type:food_store;type:point_of_interest;type:store,,Google Places (Text Search)
+Soppakeittiö,"Hämeentie 1 A, 00530 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Bakery Eatery Levain Töölö,"Runeberginkatu 29, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:bakery;type:establishment;type:food;type:food_store;type:point_of_interest;type:restaurant;type:store,,Google Places (Text Search)
-Hietalahti Market,"Lönnrotinkatu 34, 00180 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:market;type:point_of_interest,,Google Places (Text Search)
-Forum,"Mannerheimintie 14–20, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:point_of_interest;type:shopping_mall,,Google Places (Text Search)
-Citycenter Mall,"Kaivokatu 8, 00101 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:point_of_interest;type:shopping_mall,,Google Places (Text Search)
 Aito Fresh (City Center),"Kaivokatu 8 2nd floor, Citycenter, Kaivokatu 8 2 kerros, 00101 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Kluuvi Shopping Centre,"Aleksanterinkatu 9, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:clothing_store;type:establishment;type:florist;type:food;type:food_court;type:gym;type:health;type:point_of_interest;type:restaurant;type:shopping_mall;type:sporting_goods_store;type:sports_activity_location;type:store,,Google Places (Text Search)
-Stockmann Helsinki City Center,"Aleksanterinkatu 52, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:department_store;type:establishment;type:point_of_interest;type:store,,Google Places (Text Search)
 Hesburger Helsinki Kamppi,"Urho Kekkosen katu 1, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:american_restaurant;type:establishment;type:fast_food_restaurant;type:food;type:hamburger_restaurant;type:meal_takeaway;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Tawook Lab,"Second floor, Aleksanterinkatu 9, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
 Kampin Pippuri,"Runeberginkatu 4, 00100 Helsinki, Finland",Google Places candidate (no opening_date provided),confidence:low;source:google_places;type:establishment;type:food;type:point_of_interest;type:restaurant,,Google Places (Text Search)
