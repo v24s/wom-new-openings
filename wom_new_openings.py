@@ -554,6 +554,11 @@ def main() -> int:
         help="Fetch OSM history to estimate first-added timestamp (slow, rate-limited)",
     )
     parser.add_argument(
+        "--min-first-added",
+        default="",
+        help="Only include rows with osm_first_added on/after this date (YYYY-MM-DD)",
+    )
+    parser.add_argument(
         "--osm-user-agent",
         default=os.environ.get("OSM_USER_AGENT", "wom-new-openings-script"),
         help="User-Agent for OSM history API requests",
@@ -676,6 +681,18 @@ def main() -> int:
             first_added = osm_first_timestamp(el, args.osm_user_agent) or ""
             # Be gentle to the history API
             time.sleep(1)
+
+        if args.min_first_added:
+            if not first_added:
+                continue
+            try:
+                min_dt = dt.date.fromisoformat(args.min_first_added)
+                first_dt = dt.date.fromisoformat(first_added.split("T")[0])
+                if first_dt < min_dt:
+                    continue
+            except Exception:
+                # If parsing fails, skip to avoid false positives
+                continue
 
         rows.append(
             {

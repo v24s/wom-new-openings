@@ -79,6 +79,12 @@ OSM history (adds `osm_first_added`, slow and rate-limited):
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --strict-restaurants --osm-history --output data/helsinki_openings.csv
 ```
 
+Filter to first-added in 2025 or later:
+
+```bash
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --strict-restaurants --osm-history --min-first-added 2025-01-01 --output data/helsinki_openings.csv
+```
+
 ## Output
 CSV columns:
 - `name`
