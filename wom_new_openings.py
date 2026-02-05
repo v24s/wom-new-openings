@@ -130,7 +130,7 @@ area["name"="{city}"]["boundary"="administrative"]["admin_level"="8"]->.searchAr
 (
   {parts_block}
 );
-out center tags;
+out center tags meta;
 """
 
 
@@ -636,6 +636,7 @@ def main() -> int:
                 "description": description,
                 "tags": ";".join(sorted(set(tag_list))),
                 "opening_date": opening_date.isoformat() if opening_date else "",
+                "osm_last_edit": el.get("timestamp", ""),
                 "source": "OpenStreetMap",
             }
         )
@@ -739,6 +740,7 @@ def main() -> int:
                             "description": "Google Places candidate (no opening_date provided)",
                             "tags": ";".join(sorted(set(tag_list))),
                             "opening_date": "",
+                            "osm_last_edit": "",
                             "source": "Google Places (Text Search)",
                         }
                     )
@@ -819,6 +821,7 @@ def main() -> int:
                     "description": business_line or "PRH BIS registered company",
                     "tags": ";".join(sorted(set(tag_list))),
                     "opening_date": registration_date,
+                    "osm_last_edit": "",
                     "source": "PRH BIS (registration date)",
                 }
             )
@@ -827,7 +830,15 @@ def main() -> int:
     with open(args.output, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
             f,
-            fieldnames=["name", "full_address", "description", "tags", "opening_date", "source"],
+            fieldnames=[
+                "name",
+                "full_address",
+                "description",
+                "tags",
+                "opening_date",
+                "osm_last_edit",
+                "source",
+            ],
         )
         writer.writeheader()
         writer.writerows(rows)

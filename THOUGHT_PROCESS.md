@@ -30,6 +30,7 @@ Find restaurants opened in the last 6 months in Helsinki, and output a CSV with:
    - Build a full address from `addr:*` tags or use optional reverse geocoding.
    - Derive a short description from `description` or `cuisine` tags.
    - Collect tags such as `amenity`, `cuisine`, `delivery`, `takeaway`, `diet:*`, plus confidence labels.
+   - Include `osm_last_edit` to show when a venue was last edited in OSM (proxy for recency).
 
 ## Why this is automated enough for the assignment
 - The script is fully automated with no manual steps besides running it.

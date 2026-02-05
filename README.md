@@ -80,6 +80,7 @@ CSV columns:
 - `description`
 - `tags`
 - `opening_date`
+- `osm_last_edit`
 - `source`
 
 ## Notes
