@@ -27,7 +27,8 @@ OVERPASS_URLS = [
 ]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
 GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
-PRH_BIS_BASE_URL = "https://avoindata.prh.fi/bis/v1"
+# PRH BIS v1 base (newer interface uses /opendata/bis/v1)
+PRH_BIS_BASE_URL = "https://avoindata.prh.fi/opendata/bis/v1"
 HELSINKI_CENTER = (60.1699, 24.9384)
 HELSINKI_RADIUS_KM = 30
 
