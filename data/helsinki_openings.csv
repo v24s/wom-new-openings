@@ -15,7 +15,7 @@ Puksu Room,"Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;diet:v
 Factory - Vallila,,,confidence:medium;diet:halal:no;diet:kosher:no;outdoor_seating:no;restaurant;takeaway:yes,,2025-12-13T14:05:51Z,54,2007-11-17T11:29:15Z,OpenStreetMap
 Ravintola Lafal,"Hämeentie 6, 00530 Helsinki, FI",lebanese cuisine,confidence:medium;cuisine:lebanese;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant;takeaway:yes,,2025-08-26T07:28:54Z,163,2008-01-06T14:33:01Z,OpenStreetMap
 Pizzeria Parmesan,,pizza cuisine,confidence:medium;cuisine:pizza;diet:halal:no;diet:kosher:no;restaurant,,2025-10-05T08:14:06Z,123,2008-01-11T21:50:30Z,OpenStreetMap
-Mei Lin,"Annankatu 29, 00100 Helsinki, FI",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,2026-01-27T21:07:51Z,8,2008-02-19T10:00:35Z,OpenStreetMap
+Mei Lin,"Annankatu 29, 00100 Helsinki, FI",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,2026-01-27T21:07:51Z,9,2008-02-19T10:00:35Z,OpenStreetMap
 White Lady,,,confidence:medium;diet:halal:no;diet:kosher:no;restaurant,,2025-10-08T19:04:34Z,120,2008-03-02T23:07:37Z,OpenStreetMap
 Hard Rock Cafe,"Aleksanterinkatu 21, 00100 Helsinki, FI",american cuisine,confidence:medium;cuisine:american;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;restaurant,,2025-11-30T21:23:05Z,66,2008-04-07T09:17:09Z,OpenStreetMap
 Unicafe,"Mannerheimintie 3 B, 00100 Helsinki",,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant,,2025-12-15T06:59:06Z,52,2008-04-07T09:21:48Z,OpenStreetMap
@@ -110,7 +110,7 @@ Nefer Nefer Nefer,"Erottajankatu 4, Helsinki, FI","persian, arab cuisine",confid
 Sushibar + Wine,Töölönkatu 51 A,sushi cuisine,confidence:medium;cuisine:sushi;diet:halal:no;diet:kosher:no;restaurant,,2025-12-11T05:47:05Z,56,2013-08-09T20:12:05Z,OpenStreetMap
 Unicafe,"Töölönkatu 37, 00260 Helsinki",,confidence:medium;restaurant,,2025-12-15T06:59:06Z,52,2013-11-03T17:10:06Z,OpenStreetMap
 Ravintola Dhaka Grilli,"Näyttelijäntie 14 B, 00400 Helsinki",,confidence:medium;restaurant,,2026-01-28T12:22:59Z,8,2014-01-05T12:47:01Z,OpenStreetMap
-Trần Tịnh,"Siltasaarenkatu 3-5, 00530 Helsinki",vietnamese cuisine,confidence:medium;cuisine:vietnamese;diet:halal:no;diet:kosher:no;diet:vegan:only;diet:vegetarian:only;restaurant,,2025-12-28T21:18:54Z,38,2014-04-01T08:03:31Z,OpenStreetMap
+Trần Tịnh,"Siltasaarenkatu 3-5, 00530 Helsinki",vietnamese cuisine,confidence:medium;cuisine:vietnamese;diet:halal:no;diet:kosher:no;diet:vegan:only;diet:vegetarian:only;restaurant,,2025-12-28T21:18:54Z,39,2014-04-01T08:03:31Z,OpenStreetMap
 Kahvila Stoa,"Turunlinnantie 1, 00900 Helsinki",,confidence:medium;restaurant,,2026-01-12T05:56:17Z,24,2014-05-22T10:25:20Z,OpenStreetMap
 Chill out Cafe,"Varikkotie 4, 00900 Helsinki","sandwich, salad, burger cuisine",confidence:medium;cuisine:burger;cuisine:salad;cuisine:sandwich;diet:halal:no;diet:kosher:no;restaurant;takeaway:yes,,2025-11-14T12:56:28Z,83,2015-04-14T22:29:15Z,OpenStreetMap
 "Kampai 3""","Kolmas linja 18, 00530 Helsinki",japanese cuisine,confidence:medium;cuisine:japanese;outdoor_seating:yes;restaurant,,2025-08-08T14:36:21Z,181,2015-07-07T21:55:18Z,OpenStreetMap
@@ -165,7 +165,7 @@ Sano Nepal,"Kulmavuorenkatu 4, 00500 Helsinki",indian cuisine,confidence:medium;
 Omu Raisu,Kulmavuorenkatu 4,japanese cuisine,confidence:medium;cuisine:japanese;restaurant,,2026-02-02T11:32:04Z,3,2021-06-14T08:26:47Z,OpenStreetMap
 Hills Dumplings,Kalevankatu 17,,confidence:medium;diet:halal:no;diet:kosher:no;diet:vegan:yes;restaurant,,2025-09-06T17:52:06Z,152,2021-06-22T11:24:41Z,OpenStreetMap
 Majakkalaiva Relandersgrund,"Pohjoisranta 1, 00170 Helsinki, FI",,confidence:medium;diet:halal:no;diet:kosher:no;restaurant;takeaway:yes,,2025-09-03T18:08:09Z,155,2021-06-26T09:55:57Z,OpenStreetMap
-Third Place,"Arkadiankatu 23, 00100 Helsinki",pasta cuisine,confidence:medium;cuisine:pasta;restaurant,,2025-08-18T21:11:52Z,170,2021-09-27T09:58:43Z,OpenStreetMap
+Third Place,"Arkadiankatu 23, 00100 Helsinki",pasta cuisine,confidence:medium;cuisine:pasta;restaurant,,2025-08-18T21:11:52Z,171,2021-09-27T09:58:43Z,OpenStreetMap
 Ragazza,"Kahvipavunkuja 2, 00990 Helsinki",italian cuisine,confidence:medium;cuisine:italian;outdoor_seating:no;restaurant,,2025-09-20T15:38:56Z,138,2021-11-20T21:08:25Z,OpenStreetMap
 Chinaboss,"Päivöläntie 21, 00730 Helsinki",chinese cuisine,confidence:medium;cuisine:chinese;diet:halal:no;diet:kosher:no;restaurant,,2025-08-10T14:05:37Z,179,2022-02-11T06:41:22Z,OpenStreetMap
 Noodle Story,"Linnanrakentajantie 2, 00880 Helsinki",asian cuisine,confidence:medium;cuisine:asian;diet:halal:no;diet:kosher:no;restaurant,,2025-09-15T07:59:29Z,143,2022-03-11T09:00:28Z,OpenStreetMap
@@ -210,7 +210,7 @@ Ravintola Akseli,"Ilmalankuja 3, 00240 Helsinki",Lunch is served Mo-Fr 10:30-13:
 Uyghur Noodle House,"Siltasaarenkatu 13, 00530 Helsinki",Lunch prices are from 11:00 to 14:00.,confidence:medium;cuisine:uyghur;diet:vegan:yes;diet:vegetarian:yes;outdoor_seating:no;restaurant,,2025-08-08T14:36:30Z,181,2024-10-26T16:01:13Z,OpenStreetMap
 FLQ,"Tallinnanaukio 4, 00930 Helsinki",asian cuisine,confidence:medium;cuisine:asian;restaurant,,2025-11-12T09:58:18Z,85,2024-11-23T00:39:55Z,OpenStreetMap
 Dylan Luft,"Ilmalantori 4, 00240 Helsinki",Lunch is served Mo-Fr 10:30-14:00.,confidence:medium;cuisine:coffee;cuisine:lunch;cuisine:salad;cuisine:shop;cuisine:soup;diet:gluten_free:yes;diet:halal:no;diet:kosher:no;diet:lactose_free:yes;diet:vegetarian:yes;outdoor_seating:yes;restaurant,,2025-08-25T05:59:00Z,164,2025-01-04T11:13:44Z,OpenStreetMap
-Ravintola Santpauli,Tehtaankatu 21,"german, european cuisine",confidence:medium;cuisine:european;cuisine:german;diet:meat:yes;diet:vegan:yes;diet:vegetarian:yes;restaurant,,2025-11-04T21:07:29Z,92,2025-01-08T08:26:58Z,OpenStreetMap
+Ravintola Santpauli,Tehtaankatu 21,"german, european cuisine",confidence:medium;cuisine:european;cuisine:german;diet:meat:yes;diet:vegan:yes;diet:vegetarian:yes;restaurant,,2025-11-04T21:07:29Z,93,2025-01-08T08:26:58Z,OpenStreetMap
 Ihana Sushi,,sushi cuisine,confidence:medium;cuisine:sushi;restaurant,,2026-01-14T15:55:47Z,22,2025-01-11T09:52:26Z,OpenStreetMap
 Hirshabeele Ravintola,Kastelholmantie 2,somali cuisine,confidence:medium;cuisine:somali;restaurant,,2025-10-29T16:28:24Z,99,2025-01-16T11:52:33Z,OpenStreetMap
 Al Nakha,,"Oikea nimi saattaa olla eri kuin ikkunassa, pitää selvittää",confidence:medium;restaurant,,2025-10-29T16:59:42Z,99,2025-01-16T11:52:33Z,OpenStreetMap
@@ -230,7 +230,7 @@ Old Captain,"Capellanranta 4b, 00580 Helsinki","Avautunut xx.12.2025. Liiketilas
 Bistro Bardot,"Kluuvikatu 1, 00100 Helsinki",french cuisine,confidence:medium;cuisine:french;restaurant,,2025-08-12T08:05:20Z,177,2025-08-12T08:05:20Z,OpenStreetMap
 Pizza Box,,pizza cuisine,confidence:medium;cuisine:pizza;restaurant,,2025-08-12T14:59:09Z,177,2025-08-12T14:59:09Z,OpenStreetMap
 Adams Plaza,,pizza cuisine,confidence:medium;cuisine:pizza;restaurant,,2025-11-23T14:17:51Z,74,2025-08-17T16:52:03Z,OpenStreetMap
-Kantin Lunch Club,"Arkadiankatu 23, 00100 Helsinki",,confidence:medium;restaurant,,2025-08-18T21:11:52Z,170,2025-08-18T21:11:52Z,OpenStreetMap
+Kantin Lunch Club,"Arkadiankatu 23, 00100 Helsinki",,confidence:medium;restaurant,,2025-08-18T21:11:52Z,171,2025-08-18T21:11:52Z,OpenStreetMap
 Bibi Bistro,,persian cuisine,confidence:medium;cuisine:persian;restaurant,,2025-10-28T00:04:14Z,100,2025-08-18T21:16:33Z,OpenStreetMap
 Teller,"Fredrikinkatu 71, 00100 Helsinki",,confidence:medium;restaurant,,2025-08-19T06:44:12Z,170,2025-08-19T06:44:12Z,OpenStreetMap
 Damasko,"Ruosilantie 18, 00390 Helsinki, FI",mediterranean cuisine,confidence:medium;cuisine:mediterranean;restaurant,,2025-08-19T12:14:47Z,170,2025-08-19T12:14:47Z,OpenStreetMap
