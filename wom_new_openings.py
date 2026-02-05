@@ -34,6 +34,12 @@ PRH_BIS_BASE_URLS = [
     "https://avoindata.prh.fi/bis/v1",
     "https://avoindata.prh.fi/ytj/v1",
 ]
+PRH_SWAGGER_URLS = [
+    "https://avoindata.prh.fi/en/ytj/swagger-ui",
+    "https://avoindata.prh.fi/fi/ytj/swagger-ui",
+    "https://avoindata.prh.fi/sv/ytj/swagger-ui",
+]
+PRH_SEARCH_PATH_CANDIDATES = ["", "/companies", "/company", "/companies/search"]
 HELSINKI_CENTER = (60.1699, 24.9384)
 HELSINKI_RADIUS_KM = 30
 
@@ -297,6 +303,74 @@ def prh_get_json(url: str, params: Optional[Dict[str, str]] = None) -> Dict:
         return json.loads(resp.read().decode("utf-8"))
 
 
+def prh_get_text(url: str) -> str:
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return resp.read().decode("utf-8")
+
+
+def prh_join(base: str, path: str) -> str:
+    if not path:
+        return base
+    return urllib.parse.urljoin(base.rstrip("/") + "/", path.lstrip("/"))
+
+
+def prh_discover_openapi_url(swagger_url: str) -> Optional[str]:
+    html = prh_get_text(swagger_url)
+    # Common Swagger UI config pattern: url: "..."
+    match = re.search(r'url\\s*:\\s*["\\\']([^"\\\']+)["\\\']', html)
+    if match:
+        return urllib.parse.urljoin(swagger_url, match.group(1))
+
+    # Alternate pattern: "urls": [{"url": "..."}]
+    match = re.search(r'"urls"\\s*:\\s*\\[\\s*\\{\\s*"url"\\s*:\\s*"([^"]+)"', html)
+    if match:
+        return urllib.parse.urljoin(swagger_url, match.group(1))
+
+    return None
+
+
+def prh_openapi_base_and_paths(openapi_url: str) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+    if not openapi_url.lower().endswith((".json", ".yaml", ".yml")):
+        return None, None, None
+
+    text = prh_get_text(openapi_url)
+    try:
+        spec = json.loads(text)
+    except json.JSONDecodeError:
+        return None, None, None
+
+    base_url = None
+    servers = spec.get("servers") or []
+    if servers and isinstance(servers, list):
+        base_url = servers[0].get("url")
+    if base_url and base_url.startswith("/"):
+        base_url = urllib.parse.urljoin(openapi_url, base_url)
+    if not base_url:
+        base_url = openapi_url.rsplit("/", 1)[0]
+
+    search_path = None
+    company_path = None
+    paths = spec.get("paths") or {}
+    for path, methods in paths.items():
+        get_op = methods.get("get") if isinstance(methods, dict) else None
+        if not get_op:
+            continue
+        params = get_op.get("parameters") or []
+        param_names = {p.get("name") for p in params if isinstance(p, dict)}
+        if "companyRegistrationFrom" in param_names or "companyRegistrationTo" in param_names:
+            search_path = path
+        if "{businessId}" in path:
+            company_path = path
+    return base_url, search_path, company_path
+
+
+def prh_guess_company_path(search_path: str) -> str:
+    if search_path.endswith("/companies") or search_path.endswith("/companies/search"):
+        return "/companies/{businessId}"
+    return "/{businessId}"
+
+
 def prh_pick_language(items: List[Dict], key: str) -> Optional[str]:
     if not items:
         return None
@@ -344,7 +418,7 @@ def prh_resolve_base_url(
     today: dt.date,
     registered_office: str,
     business_line_code: Optional[str],
-) -> str:
+) -> Tuple[str, str, str]:
     probe_params: Dict[str, str] = {
         "companyRegistrationFrom": cutoff.isoformat(),
         "companyRegistrationTo": today.isoformat(),
@@ -358,25 +432,41 @@ def prh_resolve_base_url(
         probe_params["businessLineCode"] = business_line_code
 
     last_err: Optional[Exception] = None
-    for base_url in PRH_BIS_BASE_URLS:
+
+    # Try to discover via Swagger UI first
+    for swagger_url in PRH_SWAGGER_URLS:
         try:
-            prh_get_json(base_url, params=probe_params)
-            return base_url
-        except urllib.error.HTTPError as err:
-            last_err = err
-            if err.code == 404:
+            openapi_url = prh_discover_openapi_url(swagger_url)
+            if not openapi_url:
                 continue
-            # If not 404, endpoint exists but request might be bad; still return base
-            return base_url
+            base_url, search_path, company_path = prh_openapi_base_and_paths(openapi_url)
+            if base_url and search_path:
+                return base_url, search_path, (company_path or prh_guess_company_path(search_path))
         except Exception as err:  # noqa: BLE001
             last_err = err
             continue
+
+    # Fallback: brute force base + common path candidates
+    for base_url in PRH_BIS_BASE_URLS:
+        for path in PRH_SEARCH_PATH_CANDIDATES:
+            try:
+                prh_get_json(prh_join(base_url, path), params=probe_params)
+                return base_url, (path or ""), prh_guess_company_path(path or "")
+            except urllib.error.HTTPError as err:
+                last_err = err
+                if err.code == 404:
+                    continue
+                return base_url, (path or ""), prh_guess_company_path(path or "")
+            except Exception as err:  # noqa: BLE001
+                last_err = err
+                continue
 
     raise RuntimeError(f"PRH BIS base URL not found. Last error: {last_err}")
 
 
 def prh_fetch_companies(
     base_url: str,
+    search_path: str,
     cutoff: dt.date,
     today: dt.date,
     registered_office: str,
@@ -402,7 +492,7 @@ def prh_fetch_companies(
             if code:
                 params["businessLineCode"] = code
 
-            payload = prh_get_json(base_url, params=params)
+            payload = prh_get_json(prh_join(base_url, search_path), params=params)
             batch = payload.get("results", []) or []
             if not batch:
                 break
@@ -653,15 +743,19 @@ def main() -> int:
             business_line_codes = ["56"]
 
         try:
-            base_url = prh_resolve_base_url(
+            base_url, search_path, company_path = prh_resolve_base_url(
                 cutoff=cutoff,
                 today=today,
                 registered_office=args.prh_registered_office,
                 business_line_code=business_line_codes[0] if business_line_codes else None,
             )
-            print(f"Using PRH BIS base URL: {base_url}", file=sys.stderr)
+            print(
+                f"Using PRH BIS endpoint: {base_url}{search_path}",
+                file=sys.stderr,
+            )
             companies = prh_fetch_companies(
                 base_url=base_url,
+                search_path=search_path,
                 cutoff=cutoff,
                 today=today,
                 registered_office=args.prh_registered_office,
@@ -679,9 +773,11 @@ def main() -> int:
             registration_date = company.get("registrationDate", "") or ""
 
             details = {}
-            if business_id:
+            if business_id and company_path:
                 try:
-                    details = prh_get_json(f"{base_url}/{business_id}")
+                    details = prh_get_json(
+                        prh_join(base_url, company_path.format(businessId=business_id))
+                    )
                 except Exception:
                     details = {}
 
