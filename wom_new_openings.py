@@ -19,6 +19,7 @@ from typing import Dict, Iterable, List, Optional
 
 import urllib.parse
 import urllib.request
+import urllib.error
 
 OVERPASS_URLS = [
     "https://overpass-api.de/api/interpreter",
@@ -27,8 +28,12 @@ OVERPASS_URLS = [
 ]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
 GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
-# PRH BIS v1 base (newer interface uses /opendata/bis/v1)
-PRH_BIS_BASE_URL = "https://avoindata.prh.fi/opendata/bis/v1"
+# PRH BIS base URLs (try multiple, API has changed over time)
+PRH_BIS_BASE_URLS = [
+    "https://avoindata.prh.fi/opendata/bis/v1",
+    "https://avoindata.prh.fi/bis/v1",
+    "https://avoindata.prh.fi/ytj/v1",
+]
 HELSINKI_CENTER = (60.1699, 24.9384)
 HELSINKI_RADIUS_KM = 30
 
@@ -334,7 +339,44 @@ def prh_build_address(addresses: List[Dict]) -> str:
     return ", ".join(parts)
 
 
+def prh_resolve_base_url(
+    cutoff: dt.date,
+    today: dt.date,
+    registered_office: str,
+    business_line_code: Optional[str],
+) -> str:
+    probe_params: Dict[str, str] = {
+        "companyRegistrationFrom": cutoff.isoformat(),
+        "companyRegistrationTo": today.isoformat(),
+        "maxResults": "1",
+        "resultsFrom": "0",
+        "totalResults": "false",
+    }
+    if registered_office:
+        probe_params["registeredOffice"] = registered_office
+    if business_line_code:
+        probe_params["businessLineCode"] = business_line_code
+
+    last_err: Optional[Exception] = None
+    for base_url in PRH_BIS_BASE_URLS:
+        try:
+            prh_get_json(base_url, params=probe_params)
+            return base_url
+        except urllib.error.HTTPError as err:
+            last_err = err
+            if err.code == 404:
+                continue
+            # If not 404, endpoint exists but request might be bad; still return base
+            return base_url
+        except Exception as err:  # noqa: BLE001
+            last_err = err
+            continue
+
+    raise RuntimeError(f"PRH BIS base URL not found. Last error: {last_err}")
+
+
 def prh_fetch_companies(
+    base_url: str,
     cutoff: dt.date,
     today: dt.date,
     registered_office: str,
@@ -360,7 +402,7 @@ def prh_fetch_companies(
             if code:
                 params["businessLineCode"] = code
 
-            payload = prh_get_json(PRH_BIS_BASE_URL, params=params)
+            payload = prh_get_json(base_url, params=params)
             batch = payload.get("results", []) or []
             if not batch:
                 break
@@ -611,7 +653,15 @@ def main() -> int:
             business_line_codes = ["56"]
 
         try:
+            base_url = prh_resolve_base_url(
+                cutoff=cutoff,
+                today=today,
+                registered_office=args.prh_registered_office,
+                business_line_code=business_line_codes[0] if business_line_codes else None,
+            )
+            print(f"Using PRH BIS base URL: {base_url}", file=sys.stderr)
             companies = prh_fetch_companies(
+                base_url=base_url,
                 cutoff=cutoff,
                 today=today,
                 registered_office=args.prh_registered_office,
@@ -631,7 +681,7 @@ def main() -> int:
             details = {}
             if business_id:
                 try:
-                    details = prh_get_json(f"{PRH_BIS_BASE_URL}/{business_id}")
+                    details = prh_get_json(f"{base_url}/{business_id}")
                 except Exception:
                     details = {}
 
