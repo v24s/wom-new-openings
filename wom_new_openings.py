@@ -28,11 +28,15 @@ OVERPASS_URLS = [
 ]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
 GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
-# PRH BIS base URLs (try multiple, API has changed over time)
+# PRH BIS base URLs (try multiple, API has changed over time; some legacy endpoints are HTTP)
 PRH_BIS_BASE_URLS = [
     "https://avoindata.prh.fi/opendata/bis/v1",
+    "http://avoindata.prh.fi/opendata/bis/v1",
     "https://avoindata.prh.fi/bis/v1",
+    "http://avoindata.prh.fi/bis/v1",
     "https://avoindata.prh.fi/ytj/v1",
+    "http://avoindata.prh.fi/ytj/v1",
+    "http://avoindata.prh.fi/tr/v1",
 ]
 PRH_SWAGGER_URLS = [
     "https://avoindata.prh.fi/en/ytj/swagger-ui",
@@ -547,6 +551,11 @@ def main() -> int:
         help="Include PRH BIS companies registered in the lookback window (registration date as opening date)",
     )
     parser.add_argument(
+        "--prh-base-url",
+        default="",
+        help="Override PRH BIS base URL if auto-discovery fails",
+    )
+    parser.add_argument(
         "--prh-registered-office",
         default="Helsinki",
         help="PRH BIS registered office filter (default: Helsinki)",
@@ -743,16 +752,18 @@ def main() -> int:
             business_line_codes = ["56"]
 
         try:
-            base_url, search_path, company_path = prh_resolve_base_url(
-                cutoff=cutoff,
-                today=today,
-                registered_office=args.prh_registered_office,
-                business_line_code=business_line_codes[0] if business_line_codes else None,
-            )
-            print(
-                f"Using PRH BIS endpoint: {base_url}{search_path}",
-                file=sys.stderr,
-            )
+            if args.prh_base_url:
+                base_url = args.prh_base_url
+                search_path = ""
+                company_path = prh_guess_company_path(search_path)
+            else:
+                base_url, search_path, company_path = prh_resolve_base_url(
+                    cutoff=cutoff,
+                    today=today,
+                    registered_office=args.prh_registered_office,
+                    business_line_code=business_line_codes[0] if business_line_codes else None,
+                )
+            print(f"Using PRH BIS endpoint: {base_url}{search_path}", file=sys.stderr)
             companies = prh_fetch_companies(
                 base_url=base_url,
                 search_path=search_path,

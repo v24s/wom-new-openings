@@ -47,6 +47,12 @@ OSM + PRH BIS (official registration dates as opening-date proxy):
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --prh-bis --output data/helsinki_openings.csv
 ```
 
+If PRH auto-discovery fails, you can override the base URL (examples below):
+
+```bash
+python wom_new_openings.py --city Helsinki --months 6 --prh-bis --prh-base-url http://avoindata.prh.fi/opendata/bis/v1 --output data/helsinki_openings.csv
+```
+
 OSM + Google Places + PRH BIS (best coverage):
 
 ```bash
