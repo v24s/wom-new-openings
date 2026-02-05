@@ -21,11 +21,24 @@ OSM with "recently edited" proxy (lower confidence but higher recall):
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --output data/helsinki_openings.csv
 ```
 
+Restaurant-only filtering (stricter, excludes cafes/fast food):
+
+```bash
+python wom_new_openings.py --city Helsinki --months 6 --strict-restaurants --output data/helsinki_openings.csv
+```
+
 OSM + Google Places (requires key):
 
 ```bash
 export GOOGLE_PLACES_API_KEY="your_key_here"
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --output data/helsinki_openings.csv
+```
+
+OSM + Google Places, restaurant-only:
+
+```bash
+export GOOGLE_PLACES_API_KEY="your_key_here"
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --strict-restaurants --output data/helsinki_openings.csv
 ```
 
 One-command run (recommended, includes reverse geocoding):

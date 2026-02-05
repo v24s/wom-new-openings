@@ -30,8 +30,6 @@ GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
 HELSINKI_CENTER = (60.1699, 24.9384)
 HELSINKI_RADIUS_KM = 30
 
-AMENITY_PATTERN = re.compile(r"^(restaurant|cafe|fast_food)$", re.IGNORECASE)
-
 DATE_PATTERNS = [
     "%Y-%m-%d",
     "%Y/%m/%d",
@@ -89,15 +87,22 @@ def parse_opening_date(raw: str) -> Optional[dt.date]:
     return None
 
 
-def overpass_query(city: str, cutoff: dt.date, use_newer_proxy: bool) -> str:
+def amenity_regex(amenities: List[str]) -> str:
+    safe = [re.escape(a.strip()) for a in amenities if a.strip()]
+    if not safe:
+        return "restaurant"
+    return "|".join(safe)
+
+
+def overpass_query(city: str, cutoff: dt.date, use_newer_proxy: bool, amenity_re: str) -> str:
     parts = [
-        'nwr["amenity"~"^(restaurant|cafe|fast_food)$"]["opening_date"](area.searchArea);',
-        'nwr["amenity"~"^(restaurant|cafe|fast_food)$"]["start_date"](area.searchArea);',
+        f'nwr["amenity"~"^({amenity_re})$"]["opening_date"](area.searchArea);',
+        f'nwr["amenity"~"^({amenity_re})$"]["start_date"](area.searchArea);',
     ]
     if use_newer_proxy:
         newer_clause = f'(newer:"{cutoff.isoformat()}T00:00:00Z")'
         parts.append(
-            f'nwr["amenity"~"^(restaurant|cafe|fast_food)$"]{newer_clause}(area.searchArea);'
+            f'nwr["amenity"~"^({amenity_re})$"]{newer_clause}(area.searchArea);'
         )
 
     parts_block = "\n  ".join(parts)
@@ -112,8 +117,8 @@ out center tags;
 """
 
 
-def fetch_overpass(city: str, cutoff: dt.date, use_newer_proxy: bool) -> Dict:
-    query = overpass_query(city, cutoff, use_newer_proxy)
+def fetch_overpass(city: str, cutoff: dt.date, use_newer_proxy: bool, amenity_re: str) -> Dict:
+    query = overpass_query(city, cutoff, use_newer_proxy, amenity_re)
     data = urllib.parse.urlencode({"data": query}).encode("utf-8")
 
     last_err = None
@@ -195,13 +200,13 @@ def build_tags(tags: Dict[str, str]) -> List[str]:
     return sorted(set(tag_list))
 
 
-def extract_elements(payload: Dict) -> Iterable[Dict]:
+def extract_elements(payload: Dict, amenity_pattern: re.Pattern[str]) -> Iterable[Dict]:
     for el in payload.get("elements", []):
         tags = el.get("tags", {})
         if not tags:
             continue
         amenity = tags.get("amenity", "")
-        if not AMENITY_PATTERN.match(amenity):
+        if not amenity_pattern.match(amenity):
             continue
         yield el
 
@@ -298,6 +303,16 @@ def main() -> int:
         help="Include OSM venues recently edited within the lookback window (lower confidence)",
     )
     parser.add_argument(
+        "--osm-amenities",
+        default="restaurant,cafe,fast_food",
+        help="Comma-separated list of OSM amenity types to include (default: restaurant,cafe,fast_food)",
+    )
+    parser.add_argument(
+        "--strict-restaurants",
+        action="store_true",
+        help="Limit results to restaurants only (excludes cafes/fast_food from all sources)",
+    )
+    parser.add_argument(
         "--google-places",
         action="store_true",
         help="Include Google Places candidates (requires GOOGLE_PLACES_API_KEY)",
@@ -307,11 +322,17 @@ def main() -> int:
     today = dt.date.today()
     cutoff = subtract_months(today, args.months)
 
-    payload = fetch_overpass(args.city, cutoff, args.use_newer_proxy)
+    osm_amenities = [a.strip() for a in args.osm_amenities.split(",") if a.strip()]
+    if args.strict_restaurants:
+        osm_amenities = ["restaurant"]
+    amenity_re = amenity_regex(osm_amenities)
+    amenity_pattern = re.compile(rf"^({amenity_re})$", re.IGNORECASE)
+
+    payload = fetch_overpass(args.city, cutoff, args.use_newer_proxy, amenity_re)
     rows = []
     seen = set()
 
-    for el in extract_elements(payload):
+    for el in extract_elements(payload, amenity_pattern):
         tags = el.get("tags", {})
         opening_raw = tags.get("opening_date") or tags.get("start_date")
 
@@ -367,6 +388,19 @@ def main() -> int:
                 file=sys.stderr,
             )
         else:
+            google_allowed_types = {"restaurant", "cafe", "fast_food"}
+            google_excluded_types = {
+                "bar",
+                "pub",
+                "night_club",
+                "casino",
+                "lodging",
+                "gas_station",
+            }
+            if args.strict_restaurants:
+                google_allowed_types = {"restaurant"}
+                google_excluded_types.update({"cafe", "fast_food"})
+
             queries = [
                 f"restaurant in {args.city}",
                 f"cafe in {args.city}",
@@ -402,6 +436,16 @@ def main() -> int:
                     name = display.get("text", "") if isinstance(display, dict) else ""
                     address = place.get("formattedAddress", "")
 
+                    types = place.get("types", []) or []
+                    primary = place.get("primaryType")
+                    type_set = set(types)
+                    if primary:
+                        type_set.add(primary)
+                    if type_set & google_excluded_types:
+                        continue
+                    if not (type_set & google_allowed_types):
+                        continue
+
                     keep = False
                     if address and args.city.lower() in address.lower():
                         keep = True
@@ -417,8 +461,6 @@ def main() -> int:
                     if not keep:
                         continue
 
-                    types = place.get("types", []) or []
-                    primary = place.get("primaryType")
                     tag_list = ["source:google_places", "confidence:low"]
                     if primary:
                         tag_list.append(f"type:{primary}")
