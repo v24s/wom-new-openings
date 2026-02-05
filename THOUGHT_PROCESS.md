@@ -32,6 +32,7 @@ Find restaurants opened in the last 6 months in Helsinki, and output a CSV with:
    - Collect tags such as `amenity`, `cuisine`, `delivery`, `takeaway`, `diet:*`, plus confidence labels.
    - Include `osm_last_edit` to show when a venue was last edited in OSM (proxy for recency).
    - Include `osm_last_edit_age_days` to make recency easier to interpret.
+   - Optionally fetch OSM history to add `osm_first_added` (slow but more accurate).
 
 ## Why this is automated enough for the assignment
 - The script is fully automated with no manual steps besides running it.

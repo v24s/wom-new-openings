@@ -27,6 +27,7 @@ OVERPASS_URLS = [
     "https://overpass.nchc.org.tw/api/interpreter",
 ]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
+OSM_API_BASE = "https://api.openstreetmap.org/api/0.6"
 GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
 # PRH BIS base URLs (try multiple, API has changed over time; some legacy endpoints are HTTP)
 PRH_BIS_BASE_URLS = [
@@ -160,6 +161,28 @@ def reverse_geocode(lat: float, lon: float, user_agent: str) -> Optional[str]:
     with urllib.request.urlopen(req, timeout=20) as resp:
         payload = json.loads(resp.read().decode("utf-8"))
     return payload.get("display_name")
+
+
+def osm_first_timestamp(element: Dict, user_agent: str) -> Optional[str]:
+    el_type = element.get("type")
+    el_id = element.get("id")
+    if not el_type or not el_id:
+        return None
+
+    # OSM history API returns XML
+    url = f"{OSM_API_BASE}/{el_type}/{el_id}/history"
+    req = urllib.request.Request(url, headers={"User-Agent": user_agent})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            xml_text = resp.read().decode("utf-8")
+    except Exception:
+        return None
+
+    # Extract first occurrence of timestamp attribute
+    match = re.search(r'timestamp="([^"]+)"', xml_text)
+    if match:
+        return match.group(1)
+    return None
 
 
 def build_address(tags: Dict[str, str]) -> Optional[str]:
@@ -526,6 +549,16 @@ def main() -> int:
         help="User-Agent for Nominatim requests",
     )
     parser.add_argument(
+        "--osm-history",
+        action="store_true",
+        help="Fetch OSM history to estimate first-added timestamp (slow, rate-limited)",
+    )
+    parser.add_argument(
+        "--osm-user-agent",
+        default=os.environ.get("OSM_USER_AGENT", "wom-new-openings-script"),
+        help="User-Agent for OSM history API requests",
+    )
+    parser.add_argument(
         "--use-newer-proxy",
         action="store_true",
         help="Include OSM venues recently edited within the lookback window (lower confidence)",
@@ -638,6 +671,12 @@ def main() -> int:
             except Exception:
                 last_edit_age_days = ""
 
+        first_added = ""
+        if args.osm_history:
+            first_added = osm_first_timestamp(el, args.osm_user_agent) or ""
+            # Be gentle to the history API
+            time.sleep(1)
+
         rows.append(
             {
                 "name": name,
@@ -647,6 +686,7 @@ def main() -> int:
                 "opening_date": opening_date.isoformat() if opening_date else "",
                 "osm_last_edit": el.get("timestamp", ""),
                 "osm_last_edit_age_days": last_edit_age_days,
+                "osm_first_added": first_added,
                 "source": "OpenStreetMap",
             }
         )
@@ -752,6 +792,7 @@ def main() -> int:
                             "opening_date": "",
                             "osm_last_edit": "",
                             "osm_last_edit_age_days": "",
+                            "osm_first_added": "",
                             "source": "Google Places (Text Search)",
                         }
                     )
@@ -834,6 +875,7 @@ def main() -> int:
                     "opening_date": registration_date,
                     "osm_last_edit": "",
                     "osm_last_edit_age_days": "",
+                    "osm_first_added": "",
                     "source": "PRH BIS (registration date)",
                 }
             )
@@ -850,6 +892,7 @@ def main() -> int:
                 "opening_date",
                 "osm_last_edit",
                 "osm_last_edit_age_days",
+                "osm_first_added",
                 "source",
             ],
         )

@@ -73,6 +73,12 @@ Optional reverse geocoding for missing addresses:
 python wom_new_openings.py --city Helsinki --months 6 --reverse-geocode --nominatim-user-agent "wom-team" --output data/helsinki_openings.csv
 ```
 
+OSM history (adds `osm_first_added`, slow and rate-limited):
+
+```bash
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --strict-restaurants --osm-history --output data/helsinki_openings.csv
+```
+
 ## Output
 CSV columns:
 - `name`
@@ -82,6 +88,7 @@ CSV columns:
 - `opening_date`
 - `osm_last_edit`
 - `osm_last_edit_age_days`
+- `osm_first_added`
 - `source`
 
 ## Notes
