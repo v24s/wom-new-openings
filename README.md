@@ -28,6 +28,13 @@ export GOOGLE_PLACES_API_KEY="your_key_here"
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --output data/helsinki_openings.csv
 ```
 
+One-command run (recommended, includes reverse geocoding):
+
+```bash
+export GOOGLE_PLACES_API_KEY="your_key_here"
+./run.sh
+```
+
 Optional reverse geocoding for missing addresses:
 
 ```bash
