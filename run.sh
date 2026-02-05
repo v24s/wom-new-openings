@@ -12,5 +12,6 @@ python3 /Users/vilmasoini/Documents/WoM/wom_new_openings.py \
   --months 6 \
   --use-newer-proxy \
   --google-places \
+  --prh-bis \
   --reverse-geocode \
   --output /Users/vilmasoini/Documents/WoM/data/helsinki_openings.csv

@@ -22,7 +22,11 @@ Find restaurants opened in the last 6 months in Helsinki, and output a CSV with:
    - A location bias around Helsinki and broader query set improves recall.
    - These results do not include opening dates, so they are labeled low confidence and treated as candidates.
 
-4. **Normalize the output**
+4. **Add PRH BIS registrations (official proxy)**
+   - PRH BIS provides official company registration dates.
+   - We use registration date as a proxy for opening date and label it medium confidence.
+
+5. **Normalize the output**
    - Build a full address from `addr:*` tags or use optional reverse geocoding.
    - Derive a short description from `description` or `cuisine` tags.
    - Collect tags such as `amenity`, `cuisine`, `delivery`, `takeaway`, `diet:*`, plus confidence labels.

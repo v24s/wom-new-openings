@@ -27,6 +27,7 @@ OVERPASS_URLS = [
 ]
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
 GOOGLE_PLACES_TEXT_URL = "https://places.googleapis.com/v1/places:searchText"
+PRH_BIS_BASE_URL = "https://avoindata.prh.fi/bis/v1"
 HELSINKI_CENTER = (60.1699, 24.9384)
 HELSINKI_RADIUS_KM = 30
 
@@ -282,6 +283,96 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return r * c
 
 
+def prh_get_json(url: str, params: Optional[Dict[str, str]] = None) -> Dict:
+    if params:
+        url = f"{url}?{urllib.parse.urlencode(params)}"
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def prh_pick_language(items: List[Dict], key: str) -> Optional[str]:
+    if not items:
+        return None
+    for lang in ("en", "fi", "sv"):
+        for item in items:
+            if item.get("language") == lang and item.get(key):
+                return item.get(key)
+    for item in items:
+        if item.get(key):
+            return item.get(key)
+    return None
+
+
+def prh_build_address(addresses: List[Dict]) -> str:
+    if not addresses:
+        return ""
+    preferred = None
+    for addr in addresses:
+        addr_type = (addr.get("type") or "").lower()
+        if addr_type in {"vis", "visit", "visiting", "postal"}:
+            preferred = addr
+            break
+    if preferred is None:
+        preferred = addresses[0]
+
+    street = preferred.get("street") or preferred.get("streetAddress") or ""
+    post_code = preferred.get("postCode") or preferred.get("postcode") or ""
+    city = preferred.get("city") or ""
+    country = preferred.get("country") or preferred.get("countryName") or ""
+
+    parts = []
+    if street:
+        parts.append(street)
+    if post_code and city:
+        parts.append(f"{post_code} {city}")
+    elif city:
+        parts.append(city)
+    if country:
+        parts.append(country)
+    return ", ".join(parts)
+
+
+def prh_fetch_companies(
+    cutoff: dt.date,
+    today: dt.date,
+    registered_office: str,
+    business_line_codes: List[str],
+    page_size: int,
+    max_results: int,
+) -> List[Dict]:
+    results: List[Dict] = []
+    codes = business_line_codes or [""]
+
+    for code in codes:
+        offset = 0
+        while True:
+            params: Dict[str, str] = {
+                "companyRegistrationFrom": cutoff.isoformat(),
+                "companyRegistrationTo": today.isoformat(),
+                "maxResults": str(page_size),
+                "resultsFrom": str(offset),
+                "totalResults": "false",
+            }
+            if registered_office:
+                params["registeredOffice"] = registered_office
+            if code:
+                params["businessLineCode"] = code
+
+            payload = prh_get_json(PRH_BIS_BASE_URL, params=params)
+            batch = payload.get("results", []) or []
+            if not batch:
+                break
+            results.extend(batch)
+            offset += len(batch)
+            if max_results and len(results) >= max_results:
+                return results[:max_results]
+            if len(batch) < page_size:
+                break
+
+    return results
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Find new restaurant openings from OSM (Overpass).")
     parser.add_argument("--city", default="Helsinki", help="City name (default: Helsinki)")
@@ -316,6 +407,33 @@ def main() -> int:
         "--google-places",
         action="store_true",
         help="Include Google Places candidates (requires GOOGLE_PLACES_API_KEY)",
+    )
+    parser.add_argument(
+        "--prh-bis",
+        action="store_true",
+        help="Include PRH BIS companies registered in the lookback window (registration date as opening date)",
+    )
+    parser.add_argument(
+        "--prh-registered-office",
+        default="Helsinki",
+        help="PRH BIS registered office filter (default: Helsinki)",
+    )
+    parser.add_argument(
+        "--prh-business-line-codes",
+        default="56",
+        help="Comma-separated PRH BIS business line codes (default: 56)",
+    )
+    parser.add_argument(
+        "--prh-page-size",
+        type=int,
+        default=50,
+        help="PRH BIS page size (default: 50)",
+    )
+    parser.add_argument(
+        "--prh-max-results",
+        type=int,
+        default=200,
+        help="PRH BIS max results to fetch (default: 200)",
     )
     args = parser.parse_args()
 
@@ -482,6 +600,70 @@ def main() -> int:
                             "source": "Google Places (Text Search)",
                         }
                     )
+
+    if args.prh_bis:
+        business_line_codes = [
+            c.strip() for c in args.prh_business_line_codes.split(",") if c.strip()
+        ]
+        if args.strict_restaurants:
+            # Keep narrow by default when strict
+            business_line_codes = ["56"]
+
+        try:
+            companies = prh_fetch_companies(
+                cutoff=cutoff,
+                today=today,
+                registered_office=args.prh_registered_office,
+                business_line_codes=business_line_codes,
+                page_size=args.prh_page_size,
+                max_results=args.prh_max_results,
+            )
+        except Exception as err:  # noqa: BLE001
+            print(f"PRH BIS error: {err}", file=sys.stderr)
+            companies = []
+
+        for company in companies:
+            business_id = company.get("businessId", "")
+            name = company.get("name", "") or ""
+            registration_date = company.get("registrationDate", "") or ""
+
+            details = {}
+            if business_id:
+                try:
+                    details = prh_get_json(f"{PRH_BIS_BASE_URL}/{business_id}")
+                except Exception:
+                    details = {}
+
+            addresses = details.get("addresses") or company.get("addresses") or []
+            address = prh_build_address(addresses)
+
+            business_lines = details.get("businessLines") or []
+            business_line = prh_pick_language(business_lines, "businessLine") or ""
+            business_line_code = prh_pick_language(business_lines, "businessLineCode") or ""
+
+            tag_list = ["source:prh_bis", "confidence:medium"]
+            if business_line:
+                tag_list.append(f"business_line:{business_line}")
+            if business_line_code:
+                tag_list.append(f"business_line_code:{business_line_code}")
+            if business_id:
+                tag_list.append(f"business_id:{business_id}")
+
+            key = normalize_key(name, address or business_id)
+            if key in seen:
+                continue
+            seen.add(key)
+
+            rows.append(
+                {
+                    "name": name,
+                    "full_address": address,
+                    "description": business_line or "PRH BIS registered company",
+                    "tags": ";".join(sorted(set(tag_list))),
+                    "opening_date": registration_date,
+                    "source": "PRH BIS (registration date)",
+                }
+            )
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, "w", newline="", encoding="utf-8") as f:

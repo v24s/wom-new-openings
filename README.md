@@ -41,6 +41,19 @@ export GOOGLE_PLACES_API_KEY="your_key_here"
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --strict-restaurants --output data/helsinki_openings.csv
 ```
 
+OSM + PRH BIS (official registration dates as opening-date proxy):
+
+```bash
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --prh-bis --output data/helsinki_openings.csv
+```
+
+OSM + Google Places + PRH BIS (best coverage):
+
+```bash
+export GOOGLE_PLACES_API_KEY="your_key_here"
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --prh-bis --output data/helsinki_openings.csv
+```
+
 One-command run (recommended, includes reverse geocoding):
 
 ```bash
@@ -68,3 +81,4 @@ CSV columns:
 - OSM `newer` proxy results are **medium confidence** (recently edited, not guaranteed to be new openings).
 - Google Places results are **low confidence** (candidates without opening dates) but expand coverage.
 - Google Places uses a location bias around Helsinki and a wider set of queries to increase recall.
+- PRH BIS results use company **registration date** as a proxy for opening date (official, but not perfect).
