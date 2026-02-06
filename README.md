@@ -92,6 +92,12 @@ OSM history (adds `osm_first_added`, slow and rate-limited):
 python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --strict-restaurants --osm-history --output data/helsinki_openings.csv
 ```
 
+Google first-seen + earliest review (proxy added dates):
+
+```bash
+export GOOGLE_PLACES_API_KEY="your_key_here"
+python wom_new_openings.py --city Helsinki --months 6 --use-newer-proxy --google-places --google-details --output data/helsinki_openings.csv
+```
 Filter to first-added in 2025 or later:
 
 ```bash
@@ -108,6 +114,9 @@ CSV columns:
 - `osm_last_edit`
 - `osm_last_edit_age_days`
 - `osm_first_added`
+- `google_place_id`
+- `google_first_seen`
+- `google_first_review_date`
 - `source`
 
 ## Notes

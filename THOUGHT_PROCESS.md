@@ -34,6 +34,8 @@ Find restaurants opened in the last 6 months in Helsinki, and output a CSV with:
    - Include `osm_last_edit_age_days` to make recency easier to interpret.
    - Optionally fetch OSM history to add `osm_first_added` (slow but more accurate).
    - Optionally filter to `osm_first_added` on/after a given date (e.g., 2025-01-01).
+   - For Google Places, track `google_first_seen` (first time our pipeline saw the place ID)
+     and `google_first_review_date` (earliest review date returned by the API).
 
 ## Why this is automated enough for the assignment
 - The script is fully automated with no manual steps besides running it.

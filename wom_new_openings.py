@@ -15,6 +15,7 @@ import os
 import re
 import sys
 import time
+from pathlib import Path
 from typing import Dict, Iterable, List, Optional
 
 import urllib.parse
@@ -319,6 +320,27 @@ def google_place_details(place_id: str, api_key: str, field_mask: str) -> Dict:
         return json.loads(resp.read().decode("utf-8"))
 
 
+def load_json_file(path: str) -> Dict[str, str]:
+    file_path = Path(path)
+    if not file_path.exists():
+        return {}
+    try:
+        with file_path.open(encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            return {str(k): str(v) for k, v in data.items()}
+    except Exception:
+        return {}
+    return {}
+
+
+def save_json_file(path: str, data: Dict[str, str]) -> None:
+    file_path = Path(path)
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    with file_path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+
 def normalize_key(name: str, address: str) -> str:
     key = f"{name}|{address}".strip().lower()
     key = re.sub(r"\s+", " ", key)
@@ -610,6 +632,11 @@ def main() -> int:
         help="Max number of Google Place Details requests (default: 100)",
     )
     parser.add_argument(
+        "--google-first-seen-file",
+        default="data/google_first_seen.json",
+        help="Path to store first-seen dates for Google places (default: data/google_first_seen.json)",
+    )
+    parser.add_argument(
         "--prh-bis",
         action="store_true",
         help="Include PRH BIS companies registered in the lookback window (registration date as opening date)",
@@ -730,6 +757,9 @@ def main() -> int:
                 "osm_last_edit": el.get("timestamp", ""),
                 "osm_last_edit_age_days": last_edit_age_days,
                 "osm_first_added": first_added,
+                "google_place_id": "",
+                "google_first_seen": "",
+                "google_first_review_date": "",
                 "source": "OpenStreetMap",
             }
         )
@@ -760,9 +790,11 @@ def main() -> int:
                 "priceLevel,takeout,delivery,dineIn,reservable,outdoorSeating,"
                 "servesVegetarianFood,servesBeer,servesWine,servesCocktails,"
                 "servesCoffee,servesBreakfast,servesLunch,servesDinner,servesDessert,"
-                "regularOpeningHours"
+                "regularOpeningHours,reviews"
             )
             details_calls = 0
+            first_seen = load_json_file(args.google_first_seen_file)
+            first_seen_changed = False
 
             queries = [
                 f"restaurant in {args.city}",
@@ -798,6 +830,7 @@ def main() -> int:
                     display = place.get("displayName", {})
                     name = display.get("text", "") if isinstance(display, dict) else ""
                     address = place.get("formattedAddress", "")
+                    place_id = place.get("id", "")
 
                     types = place.get("types", []) or []
                     primary = place.get("primaryType")
@@ -826,7 +859,6 @@ def main() -> int:
 
                     details = {}
                     if args.google_details and details_calls < args.google_details_limit:
-                        place_id = place.get("id")
                         if place_id:
                             try:
                                 details = google_place_details(
@@ -843,6 +875,24 @@ def main() -> int:
                         tag_list.append(f"type:{primary}")
                     for t in types:
                         tag_list.append(f"type:{t}")
+
+                    google_first_seen = ""
+                    if place_id:
+                        if place_id not in first_seen:
+                            first_seen[place_id] = dt.date.today().isoformat()
+                            first_seen_changed = True
+                        google_first_seen = first_seen.get(place_id, "")
+
+                    google_first_review_date = ""
+                    if details:
+                        reviews = details.get("reviews") or []
+                        review_dates = []
+                        for review in reviews:
+                            ts = review.get("publishTime")
+                            if ts:
+                                review_dates.append(ts.split("T")[0])
+                        if review_dates:
+                            google_first_review_date = sorted(review_dates)[0]
 
                     if details:
                         rating = details.get("rating")
@@ -891,9 +941,15 @@ def main() -> int:
                             "osm_last_edit": "",
                             "osm_last_edit_age_days": "",
                             "osm_first_added": "",
+                            "google_place_id": place_id,
+                            "google_first_seen": google_first_seen,
+                            "google_first_review_date": google_first_review_date,
                             "source": "Google Places (Text Search)",
                         }
                     )
+
+            if first_seen_changed:
+                save_json_file(args.google_first_seen_file, first_seen)
 
     if args.prh_bis:
         business_line_codes = [
@@ -974,6 +1030,9 @@ def main() -> int:
                     "osm_last_edit": "",
                     "osm_last_edit_age_days": "",
                     "osm_first_added": "",
+                    "google_place_id": "",
+                    "google_first_seen": "",
+                    "google_first_review_date": "",
                     "source": "PRH BIS (registration date)",
                 }
             )
@@ -991,6 +1050,9 @@ def main() -> int:
                 "osm_last_edit",
                 "osm_last_edit_age_days",
                 "osm_first_added",
+                "google_place_id",
+                "google_first_seen",
+                "google_first_review_date",
                 "source",
             ],
         )
