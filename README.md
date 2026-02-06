@@ -105,3 +105,18 @@ CSV columns:
 - OSM `newer` proxy results are **medium confidence** (recently edited, not guaranteed to be new openings).
 - Google Places results are **low confidence** (candidates without opening dates) but expand coverage.
 - Google Places uses a location bias around Helsinki and a wider set of queries to increase recall.
+
+## Scaling Automation (Quality Filter)
+Use `quality_filter.py` to classify large recommendation datasets into Keep / Remove / Needs more information / Needs editing.
+
+Example:
+
+```bash
+python quality_filter.py --input data/helsinki_openings.csv --output data/helsinki_openings_quality.csv
+```
+
+Optional LLM batch export:
+
+```bash
+python quality_filter.py --input data/helsinki_openings.csv --output data/helsinki_openings_quality.csv --emit-llm-batch data/llm_batch.jsonl
+```
